@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZallDataSDK"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "The official iOS SDK of zall Digital."
   s.homepage     = "https://www.zalldigital.cn"
   s.source       = { :git => 'https://github.com/zalldata/ZallDataSDK.git', :tag => "v#{s.version}" } 
