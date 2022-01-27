@@ -151,6 +151,8 @@
 		041CBE712790050500C02A59 /* ZallDataSDK+Business.h in Headers */ = {isa = PBXBuildFile; fileRef = 041CBE702790050500C02A59 /* ZallDataSDK+Business.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		041CBE73279005CD00C02A59 /* ZallDataSDK+ZATrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 041CBE72279005CD00C02A59 /* ZallDataSDK+ZATrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		041CBEEE279518BB00C02A59 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041CBEED279518BB00C02A59 /* WebKit.framework */; };
+		04301B4E27A28B96009BA9AD /* ZACAIDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04301B4C27A28B95009BA9AD /* ZACAIDUtils.m */; };
+		04301B4F27A28B96009BA9AD /* ZACAIDUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 04301B4D27A28B95009BA9AD /* ZACAIDUtils.h */; };
 		04AC04AC279A4ACE00703C2D /* ZAAutoTrackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AC0462279A4ACD00703C2D /* ZAAutoTrackManager.h */; };
 		04AC04AD279A4ACE00703C2D /* UIView+AutoTrackProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC0464279A4ACD00703C2D /* UIView+AutoTrackProperty.m */; };
 		04AC04AE279A4ACE00703C2D /* ZAAutoTrackPropertyProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AC0465279A4ACD00703C2D /* ZAAutoTrackPropertyProtocol.h */; };
@@ -494,6 +496,8 @@
 		041CBE702790050500C02A59 /* ZallDataSDK+Business.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZallDataSDK+Business.h"; sourceTree = "<group>"; };
 		041CBE72279005CD00C02A59 /* ZallDataSDK+ZATrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZallDataSDK+ZATrack.h"; sourceTree = "<group>"; };
 		041CBEED279518BB00C02A59 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		04301B4C27A28B95009BA9AD /* ZACAIDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZACAIDUtils.m; sourceTree = "<group>"; };
+		04301B4D27A28B95009BA9AD /* ZACAIDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZACAIDUtils.h; sourceTree = "<group>"; };
 		04AC0462279A4ACD00703C2D /* ZAAutoTrackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAAutoTrackManager.h; sourceTree = "<group>"; };
 		04AC0464279A4ACD00703C2D /* UIView+AutoTrackProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoTrackProperty.m"; sourceTree = "<group>"; };
 		04AC0465279A4ACD00703C2D /* ZAAutoTrackPropertyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAAutoTrackPropertyProtocol.h; sourceTree = "<group>"; };
@@ -1020,6 +1024,7 @@
 		041CBE27278EB25600C02A59 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				04301B4B27A28B95009BA9AD /* CAID */,
 				04AC0582279A4B4A00703C2D /* AppPush */,
 				04AC0558279A4B4A00703C2D /* ChannelMatch */,
 				04AC04F7279A4B4900703C2D /* DebugMode */,
@@ -1035,6 +1040,16 @@
 			);
 			path = Modules;
 			sourceTree = "<group>";
+		};
+		04301B4B27A28B95009BA9AD /* CAID */ = {
+			isa = PBXGroup;
+			children = (
+				04301B4C27A28B95009BA9AD /* ZACAIDUtils.m */,
+				04301B4D27A28B95009BA9AD /* ZACAIDUtils.h */,
+			);
+			name = CAID;
+			path = ZallDataSDK/Modules/CAID;
+			sourceTree = SOURCE_ROOT;
 		};
 		04AC0461279A4ACD00703C2D /* AutoTrack */ = {
 			isa = PBXGroup;
@@ -1695,6 +1710,7 @@
 				041C54C62783F3BD00EB4038 /* ZAAlertViewController.h in Headers */,
 				04AC04BA279A4ACE00703C2D /* ZACellClickDynamicSubclassPlugin.h in Headers */,
 				04AC05C1279A4B4A00703C2D /* ZAEnumDescription.h in Headers */,
+				04301B4F27A28B96009BA9AD /* ZACAIDUtils.h in Headers */,
 				04AC05E7279A4B4B00703C2D /* ZARemoteConfigCheckOperator.h in Headers */,
 				04AC04E9279A4ACE00703C2D /* UIViewController+AutoTrack.h in Headers */,
 				04AC04D9279A4ACE00703C2D /* ZAProxyObject.h in Headers */,
@@ -2079,6 +2095,7 @@
 				04AC05AE279A4B4A00703C2D /* ZAVisualizedLogger.m in Sources */,
 				041C53F1277D62BE00EB4038 /* ZAModuleManager.m in Sources */,
 				04AC05E2279A4B4B00703C2D /* ZAVisualizedUtils.m in Sources */,
+				04301B4E27A28B96009BA9AD /* ZACAIDUtils.m in Sources */,
 				04AC05EF279A4B4B00703C2D /* ZARemoteConfigOperator.m in Sources */,
 				04AC062A279A4B4B00703C2D /* ZallDataSDK+ZADeviceOrientation.m in Sources */,
 				04AC04CC279A4ACE00703C2D /* ZATrackerAppEnd.m in Sources */,
