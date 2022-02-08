@@ -1,0 +1,66 @@
+{
+  "name": "ZallDataSDKExtension",
+  "version": "0.0.2",
+  "summary": "The official iOS SDK of zall Digital.",
+  "homepage": "https://www.zalldigital.cn",
+  "source": {
+    "git": "https://github.com/zalldata/ZallDataSDK.git",
+    "tag": "v0.0.2"
+  },
+  "license": {
+    "type": "Apache License, Version 2.0"
+  },
+  "authors": {
+    "郭振涛": "guozhentao@zalldigital.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "default_subspecs": "Extension",
+  "frameworks": [
+    "Foundation",
+    "SystemConfiguration"
+  ],
+  "libraries": [
+    "icucore",
+    "sqlite3",
+    "z"
+  ],
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "ZallDataSDK/Core/**/*.{h,m}",
+      "public_header_files": [
+        "ZallDataSDK/Core/**/ZallDataSDK+Business.h",
+        "ZallDataSDK/Core/**/ZAConfigOptions.h",
+        "ZallDataSDK/Core/**/ZallDataSDK+ZATrack.h",
+        "ZallDataSDK/Core/**/ZAConstantsDefin.h",
+        "ZallDataSDK/Core/**/ZAConstants.h",
+        "ZallDataSDK/Core/**/ZAConstantsEnum.h",
+        "ZallDataSDK/Core/**/ZASecurityPolicy.h",
+        "ZallDataSDK/Core/**/ZallDataSDK.h"
+      ],
+      "exclude_files": [
+        "ZallDataSDK/Core/**/ZAAlertViewController.{h,m}",
+        "ZallDataSDK/Core/**/UIView*.{h,m}"
+      ],
+      "ios": {
+        "resources": "ZallDataSDK/ZallDataSDK.bundle",
+        "frameworks": "CoreTelephony"
+      }
+    },
+    {
+      "name": "Extension",
+      "dependencies": {
+        "ZallDataSDKExtension/Core": [
+
+        ]
+      },
+      "source_files": "ZallDataSDKExtension/*.{h,m}",
+      "public_header_files": [
+        "ZallDataSDKExtension/ZAAppExtensionDataManager.h",
+        "ZallDataSDKExtension/ZallDataSDKExtension.h"
+      ]
+    }
+  ]
+}

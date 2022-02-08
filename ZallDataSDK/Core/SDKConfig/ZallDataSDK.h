@@ -25,9 +25,9 @@
 #endif
 
 #import <Foundation/Foundation.h>
-#import "ZAConfigOptions.h"
 #import "ZAConstantsDefin.h"
 #import "ZAConstantsEnum.h"
+#import "ZAConfigOptions.h"
 
 FOUNDATION_EXPORT double ZallDataSDKVersionNumber;
 
@@ -174,4 +174,4 @@ NS_INLINE ZallDataSDK* _Nullable SharedZallDataSDK(void){
 #if __has_include("ZallDataSDK+ZAVisualized.h")
 #import "ZallDataSDK+ZAVisualized.h"
 #endif
- 
+

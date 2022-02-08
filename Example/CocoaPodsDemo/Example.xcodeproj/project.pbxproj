@@ -1,0 +1,922 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04301B4927A279BF009BA9AD /* ZAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04301B4827A279BF009BA9AD /* ZAWebViewController.swift */; };
+		04301B4A27A27F5E009BA9AD /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1DC228414420004061D /* test.html */; };
+		04382AAE27A15D4000A50F2D /* JSCallOC.html in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1EB228414420004061D /* JSCallOC.html */; };
+		04382AB127A15D7E00A50F2D /* ZARootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04382AB027A15D7E00A50F2D /* ZARootViewController.swift */; };
+		04382AB327A15DB400A50F2D /* ZAViewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04382AB227A15DB400A50F2D /* ZAViewsViewController.swift */; };
+		04382AB527A234DA00A50F2D /* ZASDKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04382AB427A234DA00A50F2D /* ZASDKAction.swift */; };
+		04382ABD27A2464A00A50F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04382ABB27A2462800A50F2D /* Main.storyboard */; };
+		04AC0671279E417E00703C2D /* ZARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC0670279E417E00703C2D /* ZARootViewController.m */; };
+		04AC0677279E8E5C00703C2D /* ZASDKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC0676279E8E5C00703C2D /* ZASDKAction.m */; };
+		04AC0687279FA56500703C2D /* ZAWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC0686279FA56500703C2D /* ZAWebViewController.m */; };
+		04AC068A27A11EC900703C2D /* ZAViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC068927A11EC900703C2D /* ZAViewsViewController.m */; };
+		04BC123D27B25A8D00AC0997 /* ZallDataExtention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CB30C2282284173B0004061D /* ZallDataExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04BC124B27B2723E00AC0997 /* ZallDataExtention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CB30C2282284173B0004061D /* ZallDataExtention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0ECD9DC949B6455A8C6EF849 /* Pods_ZallData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857105B9828D6A7B60A2E557 /* Pods_ZallData.framework */; };
+		56A8FECC7127CEC546292076 /* Pods_ZallDataSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6128F6A391A1A8F400AA171 /* Pods_ZallDataSwift.framework */; };
+		8881569323B2F83900007AD1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB30C23A228418000004061D /* MainInterface.storyboard */; };
+		AEA7EFB4D85AC3E29F425018 /* Pods_ZallDataExtention.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6FB446C31F9A28C9CF281 /* Pods_ZallDataExtention.framework */; };
+		CB30C206228414420004061D /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1DC228414420004061D /* test.html */; };
+		CB30C20E228414420004061D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB30C1E8228414420004061D /* main.m */; };
+		CB30C210228414420004061D /* JSCallOC.html in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1EB228414420004061D /* JSCallOC.html */; };
+		CB30C211228414420004061D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1EC228414420004061D /* Images.xcassets */; };
+		CB30C212228414420004061D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB30C1EE228414420004061D /* AppDelegate.m */; };
+		CB30C219228414940004061D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30C1D5228414420004061D /* AppDelegate.swift */; };
+		CB30C242228418000004061D /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB30C23B228418000004061D /* ShareViewController.m */; };
+		CB30C246228421C60004061D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1E3228414420004061D /* Main.storyboard */; };
+		CB30C247228421C60004061D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1E1228414420004061D /* LaunchScreen.xib */; };
+		CB6EBB4F2285707D003CFBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1D0228414420004061D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04BC123E27B25A8D00AC0997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB30C0B02284115D0004061D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB30C2272284173B0004061D;
+			remoteInfo = ZallDataExtention;
+		};
+		04BC124C27B2723E00AC0997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB30C0B02284115D0004061D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB30C2272284173B0004061D;
+			remoteInfo = ZallDataExtention;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04BC123727B2597D00AC0997 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BC123B27B2598300AC0997 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BC124227B25A8E00AC0997 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04BC123D27B25A8D00AC0997 /* ZallDataExtention.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BC124E27B2723E00AC0997 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04BC124B27B2723E00AC0997 /* ZallDataExtention.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E65E302761F18D00B766CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04301B4827A279BF009BA9AD /* ZAWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAWebViewController.swift; sourceTree = "<group>"; };
+		04382AB027A15D7E00A50F2D /* ZARootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZARootViewController.swift; sourceTree = "<group>"; };
+		04382AB227A15DB400A50F2D /* ZAViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAViewsViewController.swift; sourceTree = "<group>"; };
+		04382AB427A234DA00A50F2D /* ZASDKAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZASDKAction.swift; sourceTree = "<group>"; };
+		04382ABC27A2462800A50F2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04AC066F279E417E00703C2D /* ZARootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZARootViewController.h; sourceTree = "<group>"; };
+		04AC0670279E417E00703C2D /* ZARootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZARootViewController.m; sourceTree = "<group>"; };
+		04AC0675279E8E5C00703C2D /* ZASDKAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZASDKAction.h; sourceTree = "<group>"; };
+		04AC0676279E8E5C00703C2D /* ZASDKAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZASDKAction.m; sourceTree = "<group>"; };
+		04AC0685279FA56500703C2D /* ZAWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAWebViewController.h; sourceTree = "<group>"; };
+		04AC0686279FA56500703C2D /* ZAWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAWebViewController.m; sourceTree = "<group>"; };
+		04AC068827A11EC900703C2D /* ZAViewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAViewsViewController.h; sourceTree = "<group>"; };
+		04AC068927A11EC900703C2D /* ZAViewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAViewsViewController.m; sourceTree = "<group>"; };
+		12A4FAADC61CB4D5A65195EF /* Pods-ZallDataExtention.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZallDataExtention.release.xcconfig"; path = "Target Support Files/Pods-ZallDataExtention/Pods-ZallDataExtention.release.xcconfig"; sourceTree = "<group>"; };
+		4485BDED3E5F422D5E65CACD /* Pods-ZallDataSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZallDataSwift.release.xcconfig"; path = "Target Support Files/Pods-ZallDataSwift/Pods-ZallDataSwift.release.xcconfig"; sourceTree = "<group>"; };
+		4CE6FB446C31F9A28C9CF281 /* Pods_ZallDataExtention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZallDataExtention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E9C5A89E545EFFC05B30DA5 /* Pods-ZallDataExtention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZallDataExtention.debug.xcconfig"; path = "Target Support Files/Pods-ZallDataExtention/Pods-ZallDataExtention.debug.xcconfig"; sourceTree = "<group>"; };
+		517C5FBAC80002823F5AFEF8 /* Pods-ZallDataSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZallDataSwift.debug.xcconfig"; path = "Target Support Files/Pods-ZallDataSwift/Pods-ZallDataSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		857105B9828D6A7B60A2E557 /* Pods_ZallData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZallData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A0C0AB4A1EF5D4BD960872 /* Pods-ZallData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZallData.release.xcconfig"; path = "Target Support Files/Pods-ZallData/Pods-ZallData.release.xcconfig"; sourceTree = "<group>"; };
+		B6128F6A391A1A8F400AA171 /* Pods_ZallDataSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZallDataSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30C15C228413B20004061D /* ZallData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZallData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30C18C2284140E0004061D /* ZallDataSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZallDataSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30C1CF228414420004061D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB30C1D1228414420004061D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB30C1D5228414420004061D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB30C1D6228414420004061D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB30C1DB228414420004061D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB30C1DC228414420004061D /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		CB30C1E2228414420004061D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CB30C1E4228414420004061D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB30C1E8228414420004061D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB30C1EB228414420004061D /* JSCallOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JSCallOC.html; sourceTree = "<group>"; };
+		CB30C1EC228414420004061D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB30C1ED228414420004061D /* ZallData.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ZallData.entitlements; sourceTree = "<group>"; };
+		CB30C1EE228414420004061D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB30C1F3228414420004061D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB30C2282284173B0004061D /* ZallDataExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ZallDataExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB30C23A228418000004061D /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		CB30C23B228418000004061D /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		CB30C23C228418000004061D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB30C23D228418000004061D /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		CB30C240228418000004061D /* ZallDataExtention.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ZallDataExtention.entitlements; sourceTree = "<group>"; };
+		D9C82D3ECD5306E8FDFEC759 /* Pods-ZallData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZallData.debug.xcconfig"; path = "Target Support Files/Pods-ZallData/Pods-ZallData.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB30C159228413B20004061D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ECD9DC949B6455A8C6EF849 /* Pods_ZallData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30C1892284140E0004061D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A8FECC7127CEC546292076 /* Pods_ZallDataSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30C2252284173B0004061D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA7EFB4D85AC3E29F425018 /* Pods_ZallDataExtention.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18D185180AE86DBDA2E076E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9C82D3ECD5306E8FDFEC759 /* Pods-ZallData.debug.xcconfig */,
+				B4A0C0AB4A1EF5D4BD960872 /* Pods-ZallData.release.xcconfig */,
+				4E9C5A89E545EFFC05B30DA5 /* Pods-ZallDataExtention.debug.xcconfig */,
+				12A4FAADC61CB4D5A65195EF /* Pods-ZallDataExtention.release.xcconfig */,
+				517C5FBAC80002823F5AFEF8 /* Pods-ZallDataSwift.debug.xcconfig */,
+				4485BDED3E5F422D5E65CACD /* Pods-ZallDataSwift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB30C0AF2284115D0004061D = {
+			isa = PBXGroup;
+			children = (
+				CB30C1D7228414420004061D /* ZallData */,
+				CB30C1CD228414420004061D /* ZallDataSwift */,
+				CB30C2292284173B0004061D /* ZallDataExtention */,
+				CB30C0B92284115D0004061D /* Products */,
+				CB30C2202284165A0004061D /* Frameworks */,
+				18D185180AE86DBDA2E076E4 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CB30C0B92284115D0004061D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB30C15C228413B20004061D /* ZallData.app */,
+				CB30C18C2284140E0004061D /* ZallDataSwift.app */,
+				CB30C2282284173B0004061D /* ZallDataExtention.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB30C1CD228414420004061D /* ZallDataSwift */ = {
+			isa = PBXGroup;
+			children = (
+				CB30C1D5228414420004061D /* AppDelegate.swift */,
+				04382ABB27A2462800A50F2D /* Main.storyboard */,
+				04382AB027A15D7E00A50F2D /* ZARootViewController.swift */,
+				04382AB227A15DB400A50F2D /* ZAViewsViewController.swift */,
+				04382AB427A234DA00A50F2D /* ZASDKAction.swift */,
+				04301B4827A279BF009BA9AD /* ZAWebViewController.swift */,
+				CB30C1CF228414420004061D /* Assets.xcassets */,
+				CB30C1D0228414420004061D /* LaunchScreen.storyboard */,
+				CB30C1D6228414420004061D /* Info.plist */,
+			);
+			path = ZallDataSwift;
+			sourceTree = "<group>";
+		};
+		CB30C1D7228414420004061D /* ZallData */ = {
+			isa = PBXGroup;
+			children = (
+				CB30C1DB228414420004061D /* AppDelegate.h */,
+				CB30C1EE228414420004061D /* AppDelegate.m */,
+				04AC066F279E417E00703C2D /* ZARootViewController.h */,
+				04AC0670279E417E00703C2D /* ZARootViewController.m */,
+				04AC0675279E8E5C00703C2D /* ZASDKAction.h */,
+				04AC0676279E8E5C00703C2D /* ZASDKAction.m */,
+				04AC0685279FA56500703C2D /* ZAWebViewController.h */,
+				04AC0686279FA56500703C2D /* ZAWebViewController.m */,
+				04AC068827A11EC900703C2D /* ZAViewsViewController.h */,
+				04AC068927A11EC900703C2D /* ZAViewsViewController.m */,
+				CB30C1E3228414420004061D /* Main.storyboard */,
+				CB30C21B2284150E0004061D /* Supporting Files */,
+			);
+			path = ZallData;
+			sourceTree = "<group>";
+		};
+		CB30C21B2284150E0004061D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB30C1EC228414420004061D /* Images.xcassets */,
+				CB30C1E1228414420004061D /* LaunchScreen.xib */,
+				CB30C1ED228414420004061D /* ZallData.entitlements */,
+				CB30C1DC228414420004061D /* test.html */,
+				CB30C1EB228414420004061D /* JSCallOC.html */,
+				CB30C1F3228414420004061D /* Info.plist */,
+				CB30C1E8228414420004061D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB30C2202284165A0004061D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				857105B9828D6A7B60A2E557 /* Pods_ZallData.framework */,
+				4CE6FB446C31F9A28C9CF281 /* Pods_ZallDataExtention.framework */,
+				B6128F6A391A1A8F400AA171 /* Pods_ZallDataSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB30C2292284173B0004061D /* ZallDataExtention */ = {
+			isa = PBXGroup;
+			children = (
+				CB30C240228418000004061D /* ZallDataExtention.entitlements */,
+				CB30C23D228418000004061D /* ShareViewController.h */,
+				CB30C23B228418000004061D /* ShareViewController.m */,
+				CB30C23A228418000004061D /* MainInterface.storyboard */,
+				CB30C23C228418000004061D /* Info.plist */,
+			);
+			path = ZallDataExtention;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB30C15B228413B20004061D /* ZallData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB30C16F228413B30004061D /* Build configuration list for PBXNativeTarget "ZallData" */;
+			buildPhases = (
+				E2EF9EF753E6C804B40DC51E /* [CP] Check Pods Manifest.lock */,
+				CB30C158228413B20004061D /* Sources */,
+				CB30C159228413B20004061D /* Frameworks */,
+				CB30C15A228413B20004061D /* Resources */,
+				04BC123727B2597D00AC0997 /* Embed Frameworks */,
+				AC2007C400AD62DBCE11DF16 /* [CP] Embed Pods Frameworks */,
+				04BC124E27B2723E00AC0997 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04BC124D27B2723E00AC0997 /* PBXTargetDependency */,
+			);
+			name = ZallData;
+			productName = HelloZallAnalytics;
+			productReference = CB30C15C228413B20004061D /* ZallData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB30C18B2284140E0004061D /* ZallDataSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB30C19B2284140F0004061D /* Build configuration list for PBXNativeTarget "ZallDataSwift" */;
+			buildPhases = (
+				1839B637BF31D1FFC5287863 /* [CP] Check Pods Manifest.lock */,
+				CB30C1882284140E0004061D /* Sources */,
+				CB30C1892284140E0004061D /* Frameworks */,
+				CB30C18A2284140E0004061D /* Resources */,
+				04E65E302761F18D00B766CA /* Embed Frameworks */,
+				04BC124227B25A8E00AC0997 /* Embed App Extensions */,
+				0C5208D0DF1970E1EFFA074B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04BC123F27B25A8D00AC0997 /* PBXTargetDependency */,
+			);
+			name = ZallDataSwift;
+			productName = ZallDataSwiftDemo;
+			productReference = CB30C18C2284140E0004061D /* ZallDataSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB30C2272284173B0004061D /* ZallDataExtention */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB30C2342284173B0004061D /* Build configuration list for PBXNativeTarget "ZallDataExtention" */;
+			buildPhases = (
+				6BA5F82341EECDE557679E2C /* [CP] Check Pods Manifest.lock */,
+				CB30C2242284173B0004061D /* Sources */,
+				CB30C2252284173B0004061D /* Frameworks */,
+				CB30C2262284173B0004061D /* Resources */,
+				04BC123B27B2598300AC0997 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZallDataExtention;
+			productName = ZallDataExtention;
+			productReference = CB30C2282284173B0004061D /* ZallDataExtention.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB30C0B02284115D0004061D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZA;
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Zall Data Co., Ltd";
+				TargetAttributes = {
+					CB30C15B228413B20004061D = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					CB30C18B2284140E0004061D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					CB30C2272284173B0004061D = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = CB30C0B32284115D0004061D /* Build configuration list for PBXProject "Example" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB30C0AF2284115D0004061D;
+			productRefGroup = CB30C0B92284115D0004061D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB30C15B228413B20004061D /* ZallData */,
+				CB30C18B2284140E0004061D /* ZallDataSwift */,
+				CB30C2272284173B0004061D /* ZallDataExtention */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB30C15A228413B20004061D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB30C246228421C60004061D /* Main.storyboard in Resources */,
+				CB30C247228421C60004061D /* LaunchScreen.xib in Resources */,
+				CB30C211228414420004061D /* Images.xcassets in Resources */,
+				CB30C210228414420004061D /* JSCallOC.html in Resources */,
+				CB30C206228414420004061D /* test.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30C18A2284140E0004061D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04301B4A27A27F5E009BA9AD /* test.html in Resources */,
+				04382AAE27A15D4000A50F2D /* JSCallOC.html in Resources */,
+				CB6EBB4F2285707D003CFBA8 /* LaunchScreen.storyboard in Resources */,
+				04382ABD27A2464A00A50F2D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30C2262284173B0004061D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8881569323B2F83900007AD1 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C5208D0DF1970E1EFFA074B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZallDataSwift/Pods-ZallDataSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZallDataSwift/Pods-ZallDataSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZallDataSwift/Pods-ZallDataSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1839B637BF31D1FFC5287863 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZallDataSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BA5F82341EECDE557679E2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZallDataExtention-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC2007C400AD62DBCE11DF16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZallData/Pods-ZallData-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZallData/Pods-ZallData-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZallData/Pods-ZallData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2EF9EF753E6C804B40DC51E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZallData-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB30C158228413B20004061D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AC068A27A11EC900703C2D /* ZAViewsViewController.m in Sources */,
+				CB30C20E228414420004061D /* main.m in Sources */,
+				04AC0687279FA56500703C2D /* ZAWebViewController.m in Sources */,
+				04AC0677279E8E5C00703C2D /* ZASDKAction.m in Sources */,
+				04AC0671279E417E00703C2D /* ZARootViewController.m in Sources */,
+				CB30C212228414420004061D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30C1882284140E0004061D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB30C219228414940004061D /* AppDelegate.swift in Sources */,
+				04301B4927A279BF009BA9AD /* ZAWebViewController.swift in Sources */,
+				04382AB527A234DA00A50F2D /* ZASDKAction.swift in Sources */,
+				04382AB327A15DB400A50F2D /* ZAViewsViewController.swift in Sources */,
+				04382AB127A15D7E00A50F2D /* ZARootViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB30C2242284173B0004061D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB30C242228418000004061D /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04BC123F27B25A8D00AC0997 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB30C2272284173B0004061D /* ZallDataExtention */;
+			targetProxy = 04BC123E27B25A8D00AC0997 /* PBXContainerItemProxy */;
+		};
+		04BC124D27B2723E00AC0997 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB30C2272284173B0004061D /* ZallDataExtention */;
+			targetProxy = 04BC124C27B2723E00AC0997 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04382ABB27A2462800A50F2D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04382ABC27A2462800A50F2D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB30C1D0228414420004061D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB30C1D1228414420004061D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CB30C1E1228414420004061D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB30C1E2228414420004061D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		CB30C1E3228414420004061D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB30C1E4228414420004061D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB30C0CC2284115F0004061D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_IZA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB30C0CD2284115F0004061D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_IZA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB30C170228413B30004061D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9C82D3ECD5306E8FDFEC759 /* Pods-ZallData.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ZallData/ZallData.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				INFOPLIST_FILE = "$(SRCROOT)/ZallData/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB30C171228413B30004061D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4A0C0AB4A1EF5D4BD960872 /* Pods-ZallData.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ZallData/ZallData.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				INFOPLIST_FILE = "$(SRCROOT)/ZallData/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB30C19C2284140F0004061D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 517C5FBAC80002823F5AFEF8 /* Pods-ZallDataSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				INFOPLIST_FILE = ZallDataSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_execute;
+				MARKETING_VERSION = 1.4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB30C19D2284140F0004061D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4485BDED3E5F422D5E65CACD /* Pods-ZallDataSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				INFOPLIST_FILE = ZallDataSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_execute;
+				MARKETING_VERSION = 1.4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB30C2352284173B0004061D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E9C5A89E545EFFC05B30DA5 /* Pods-ZallDataExtention.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ZallDataExtention/ZallDataExtention.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				INFOPLIST_FILE = ZallDataExtention/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData.share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB30C2362284173B0004061D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A4FAADC61CB4D5A65195EF /* Pods-ZallDataExtention.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ZallDataExtention/ZallDataExtention.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				INFOPLIST_FILE = ZallDataExtention/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData.share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB30C0B32284115D0004061D /* Build configuration list for PBXProject "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30C0CC2284115F0004061D /* Debug */,
+				CB30C0CD2284115F0004061D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB30C16F228413B30004061D /* Build configuration list for PBXNativeTarget "ZallData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30C170228413B30004061D /* Debug */,
+				CB30C171228413B30004061D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB30C19B2284140F0004061D /* Build configuration list for PBXNativeTarget "ZallDataSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30C19C2284140F0004061D /* Debug */,
+				CB30C19D2284140F0004061D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB30C2342284173B0004061D /* Build configuration list for PBXNativeTarget "ZallDataExtention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB30C2352284173B0004061D /* Debug */,
+				CB30C2362284173B0004061D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB30C0B02284115D0004061D /* Project object */;
+}

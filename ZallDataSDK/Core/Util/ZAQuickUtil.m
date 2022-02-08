@@ -28,7 +28,6 @@
 #import "ZAUtilCheck.h"
 #include <CommonCrypto/CommonCrypto.h>
 #include <zlib.h>
-#import <UIKit/UIKit.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
 #include <sys/sysctl.h>
@@ -39,6 +38,8 @@
 #include <dlfcn.h>
 #include <mach-o/loader.h>
 #include <mach-o/getsect.h>
+
+#import <UIKit/UIKit.h>
 
 #define retWithType(classType) (classType (*)(id, SEL))
 
@@ -522,6 +523,9 @@ NSArray<NSString *>* zaAppLoadReadConfigFromSection(const char *sectionName){
     return blockIdfa();
 }
 + (NSString *)idfv{
+    if (za_quick_app_extension()) {
+        return nil;
+    }
     return [UIDevice currentDevice].identifierForVendor.UUIDString;
 }
 

@@ -6,53 +6,6 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		041C5329277AB08800EB4038 /* ZallDataSDKDoc */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 041C532C277AB08800EB4038 /* Build configuration list for PBXAggregateTarget "ZallDataSDKDoc" */;
-			buildPhases = (
-				041C532E277AB09400EB4038 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = ZallDataSDKDoc;
-			productName = ZallDataSDKDoc;
-		};
-		045D1699277316B800FDD90B /* AutoS&ASDK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 045D169C277316B800FDD90B /* Build configuration list for PBXAggregateTarget "AutoS&ASDK" */;
-			buildPhases = (
-				045D169D277316BC00FDD90B /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "AutoS&ASDK";
-			productName = SDKPackag;
-		};
-		045D169E2773173700FDD90B /* AutoZallDataSDK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 045D16A02773173700FDD90B /* Build configuration list for PBXAggregateTarget "AutoZallDataSDK" */;
-			buildPhases = (
-				045D169F2773173700FDD90B /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = AutoZallDataSDK;
-			productName = SDKPackag;
-		};
-		045D16A32773184800FDD90B /* AutoPageck */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 045D16A52773184800FDD90B /* Build configuration list for PBXAggregateTarget "AutoPageck" */;
-			buildPhases = (
-				045D16A42773184800FDD90B /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = AutoPageck;
-			productName = SDKPackag;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		041C5346277AFC5200EB4038 /* ZARefactorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5345277AFC5200EB4038 /* ZARefactorTestCase.m */; };
 		041C5384277BFBC400EB4038 /* ZAUtilCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5377277BFBC400EB4038 /* ZAUtilCheck.m */; };
@@ -109,7 +62,7 @@
 		041C5418277D976B00EB4038 /* ZASuperProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5414277D976A00EB4038 /* ZASuperProperty.m */; };
 		041C5419277D976B00EB4038 /* ZASuperProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5415277D976B00EB4038 /* ZASuperProperty.h */; };
 		041C541A277D976B00EB4038 /* ZAPresetProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5416277D976B00EB4038 /* ZAPresetProperty.h */; };
-		041C541E277DA53000EB4038 /* ZATrackerAppTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C541C277DA53000EB4038 /* ZATrackerAppTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		041C541E277DA53000EB4038 /* ZATrackerAppTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C541C277DA53000EB4038 /* ZATrackerAppTimer.h */; };
 		041C541F277DA53000EB4038 /* ZATrackerAppTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C541D277DA53000EB4038 /* ZATrackerAppTimer.m */; };
 		041C5423277DA94200EB4038 /* ZAEventBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5421277DA94200EB4038 /* ZAEventBaseObject.m */; };
 		041C5424277DA94200EB4038 /* ZAEventBaseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5422277DA94200EB4038 /* ZAEventBaseObject.h */; };
@@ -380,10 +333,10 @@
 		04AC0644279A538C00703C2D /* ZallDataSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6EBAE5228551EC003CFBA8 /* ZallDataSDKTests.m */; };
 		04AC0645279A538C00703C2D /* ZAUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D76AEEE2364393400B4D0AF /* ZAUtilsTest.m */; };
 		04AC0646279A538C00703C2D /* ZADatabaseUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F214CE57249A07DF00A2633D /* ZADatabaseUnitTest.m */; };
-		04AC067E279EB18800703C2D /* ZAAppExtensionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC067C279EB18800703C2D /* ZAAppExtensionDataManager.m */; };
-		04AC067F279EB18800703C2D /* ZAAppExtensionDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AC067D279EB18800703C2D /* ZAAppExtensionDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04AC0683279EB19D00703C2D /* ZAAppExtensionDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AC0681279EB19D00703C2D /* ZAAppExtensionDataManager.h */; };
-		04AC0684279EB19D00703C2D /* ZAAppExtensionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AC0682279EB19D00703C2D /* ZAAppExtensionDataManager.m */; };
+		04BC11F427B20BE000AC0997 /* ZAAppExtensionDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BC11F227B20BE000AC0997 /* ZAAppExtensionDataManager.h */; };
+		04BC11F527B20BE000AC0997 /* ZAAppExtensionDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04BC11F227B20BE000AC0997 /* ZAAppExtensionDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04BC11F627B20BE000AC0997 /* ZAAppExtensionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC11F327B20BE000AC0997 /* ZAAppExtensionDataManager.m */; };
+		04BC11F727B20BE000AC0997 /* ZAAppExtensionDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BC11F327B20BE000AC0997 /* ZAAppExtensionDataManager.m */; };
 		CB30C09A22840EC00004061D /* ZallDataSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB30C02E22840EBF0004061D /* ZallDataSDK.bundle */; };
 		CB30C31322843D3A0004061D /* ZallDataSDKExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = CB30C31122843D3A0004061D /* ZallDataSDKExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB6EBAE8228551ED003CFBA8 /* ZallDataSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB30BD5422840CA40004061D /* ZallDataSDK.framework */; };
@@ -713,10 +666,8 @@
 		04AC0594279A4B4A00703C2D /* ZallDataSDK+ZADeviceOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZallDataSDK+ZADeviceOrientation.m"; sourceTree = "<group>"; };
 		04AC0595279A4B4A00703C2D /* ZallDataSDK+ZADeviceOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZallDataSDK+ZADeviceOrientation.h"; sourceTree = "<group>"; };
 		04AC0596279A4B4A00703C2D /* ZADeviceOrientationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZADeviceOrientationManager.h; sourceTree = "<group>"; };
-		04AC067C279EB18800703C2D /* ZAAppExtensionDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAAppExtensionDataManager.m; path = ZallDataSDK/Core/Extension/ZAAppExtensionDataManager.m; sourceTree = SOURCE_ROOT; };
-		04AC067D279EB18800703C2D /* ZAAppExtensionDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAAppExtensionDataManager.h; path = ZallDataSDK/Core/Extension/ZAAppExtensionDataManager.h; sourceTree = SOURCE_ROOT; };
-		04AC0681279EB19D00703C2D /* ZAAppExtensionDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAAppExtensionDataManager.h; sourceTree = "<group>"; };
-		04AC0682279EB19D00703C2D /* ZAAppExtensionDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAAppExtensionDataManager.m; sourceTree = "<group>"; };
+		04BC11F227B20BE000AC0997 /* ZAAppExtensionDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAAppExtensionDataManager.h; sourceTree = "<group>"; };
+		04BC11F327B20BE000AC0997 /* ZAAppExtensionDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAAppExtensionDataManager.m; sourceTree = "<group>"; };
 		4D6A188E22978F5B00F6B218 /* ElementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementViewController.m; sourceTree = "<group>"; };
 		4D6A188F22978F5B00F6B218 /* ZAAutoTrackUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAAutoTrackUtilsTest.m; sourceTree = "<group>"; };
 		4D6A189022978F5B00F6B218 /* ElementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementViewController.h; sourceTree = "<group>"; };
@@ -770,7 +721,6 @@
 		041C5375277BFBC400EB4038 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				04AC0680279EB19D00703C2D /* Extension */,
 				041CBD5927869EC500C02A59 /* Module */,
 				041CBD9C278D789800C02A59 /* Tracker */,
 				041C5420277DA92100EB4038 /* Event */,
@@ -1024,7 +974,6 @@
 		041CBE27278EB25600C02A59 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				04301B4B27A28B95009BA9AD /* CAID */,
 				04AC0582279A4B4A00703C2D /* AppPush */,
 				04AC0558279A4B4A00703C2D /* ChannelMatch */,
 				04AC04F7279A4B4900703C2D /* DebugMode */,
@@ -1048,7 +997,7 @@
 				04301B4D27A28B95009BA9AD /* ZACAIDUtils.h */,
 			);
 			name = CAID;
-			path = ZallDataSDK/Modules/CAID;
+			path = ZallDataSDK/Modules/ChannelMatch/CAID;
 			sourceTree = SOURCE_ROOT;
 		};
 		04AC0461279A4ACD00703C2D /* AutoTrack */ = {
@@ -1391,6 +1340,7 @@
 		04AC0558279A4B4A00703C2D /* ChannelMatch */ = {
 			isa = PBXGroup;
 			children = (
+				04301B4B27A28B95009BA9AD /* CAID */,
 				04AC055C279A4B4A00703C2D /* ZAChannelMatchManager.h */,
 				04AC0559279A4B4A00703C2D /* ZAChannelMatchManager.m */,
 				04AC055B279A4B4A00703C2D /* ZallDataSDK+ZAChannelMatch.h */,
@@ -1494,15 +1444,6 @@
 			path = DeviceOrientation;
 			sourceTree = "<group>";
 		};
-		04AC0680279EB19D00703C2D /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				04AC0681279EB19D00703C2D /* ZAAppExtensionDataManager.h */,
-				04AC0682279EB19D00703C2D /* ZAAppExtensionDataManager.m */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		4D6A188D22978F5B00F6B218 /* AutoTrack */ = {
 			isa = PBXGroup;
 			children = (
@@ -1573,8 +1514,8 @@
 		CB30C31022843D3A0004061D /* ZallDataSDKExtension */ = {
 			isa = PBXGroup;
 			children = (
-				04AC067D279EB18800703C2D /* ZAAppExtensionDataManager.h */,
-				04AC067C279EB18800703C2D /* ZAAppExtensionDataManager.m */,
+				04BC11F227B20BE000AC0997 /* ZAAppExtensionDataManager.h */,
+				04BC11F327B20BE000AC0997 /* ZAAppExtensionDataManager.m */,
 				CB30C31122843D3A0004061D /* ZallDataSDKExtension.h */,
 			);
 			path = ZallDataSDKExtension;
@@ -1746,6 +1687,7 @@
 				04AC04E1279A4ACE00703C2D /* ZallDataSDK+ZAAutoTrack.h in Headers */,
 				041C542A277DBA7400EB4038 /* ZAEventBuildStrategyProtocol.h in Headers */,
 				041CBDA2278D810100C02A59 /* ZAConstantsEnum.h in Headers */,
+				04BC11F427B20BE000AC0997 /* ZAAppExtensionDataManager.h in Headers */,
 				041C541A277D976B00EB4038 /* ZAPresetProperty.h in Headers */,
 				04AC060E279A4B4B00703C2D /* ZASecretKey.h in Headers */,
 				04AC05A9279A4B4A00703C2D /* ZAViewNode.h in Headers */,
@@ -1754,7 +1696,6 @@
 				04AC05EC279A4B4B00703C2D /* ZARemoteConfigCommonOperator.h in Headers */,
 				04AC04E7279A4ACE00703C2D /* ZASwizzle.h in Headers */,
 				04AC04D2279A4ACE00703C2D /* ZATrackerAppClick.h in Headers */,
-				04AC0683279EB19D00703C2D /* ZAAppExtensionDataManager.h in Headers */,
 				04AC05DC279A4B4B00703C2D /* ZAApplicationStateSerializer.h in Headers */,
 				04AC062C279A4B4B00703C2D /* ZADeviceOrientationManager.h in Headers */,
 				04AC0623279A4B4B00703C2D /* ZallDataSDK+ZAAppPush.h in Headers */,
@@ -1786,7 +1727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB30C31322843D3A0004061D /* ZallDataSDKExtension.h in Headers */,
-				04AC067F279EB18800703C2D /* ZAAppExtensionDataManager.h in Headers */,
+				04BC11F527B20BE000AC0997 /* ZAAppExtensionDataManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1859,12 +1800,6 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Zall Data Co., Ltd";
 				TargetAttributes = {
-					041C5329277AB08800EB4038 = {
-						CreatedOnToolsVersion = 13.1;
-					};
-					045D1699277316B800FDD90B = {
-						CreatedOnToolsVersion = 13.1;
-					};
 					CB30BD5322840CA40004061D = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1250;
@@ -1893,10 +1828,6 @@
 				CB30BD5322840CA40004061D /* ZallDataSDK */,
 				CB30C30E22843D3A0004061D /* ZallDataSDKExtension */,
 				CB6EBAE2228551EC003CFBA8 /* ZallDataSDKTests */,
-				045D1699277316B800FDD90B /* AutoS&ASDK */,
-				045D169E2773173700FDD90B /* AutoZallDataSDK */,
-				045D16A32773184800FDD90B /* AutoPageck */,
-				041C5329277AB08800EB4038 /* ZallDataSDKDoc */,
 			);
 		};
 /* End PBXProject section */
@@ -1927,23 +1858,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		041C532E277AB09400EB4038 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "appledoc --output ./doc --project-name ZallDataSDK --project-company \"zall\" --company-id \"com.zalldata.sdk\" --docset-bundle-name \"ZallDataSDK:\" . \nexit 0\n";
-		};
 		041C53D5277D481C00EB4038 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1960,57 +1874,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
-		};
-		045D169D277316BC00FDD90B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "python3 build_script/ios_metedata_method_option.py -h5 1\n\n";
-		};
-		045D169F2773173700FDD90B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "python3 build_script/ios_metedata_method_option.py\n\n";
-		};
-		045D16A42773184800FDD90B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# https://stackoverflow.com/questions/65609971/showing-all-messages-error-accessing-build-database-users-sdks-desktop-build\n# 并没有什么用\npython3 build_script/ios_metedata_method_option.py --packag 1 -h5 1\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2031,6 +1894,7 @@
 				041C5427277DAAF900EB4038 /* ZAEventLibObject.m in Sources */,
 				041C5407277D89C000EB4038 /* ZAIdentifier.m in Sources */,
 				04AC05F6279A4B4B00703C2D /* ZallDataSDK+ZAChannelMatch.m in Sources */,
+				04BC11F627B20BE000AC0997 /* ZAAppExtensionDataManager.m in Sources */,
 				04AC05FE279A4B4B00703C2D /* ZAAlgorithmProtocol.m in Sources */,
 				041C551B2785995900EB4038 /* ZAEventProfileObject.m in Sources */,
 				041C5418277D976B00EB4038 /* ZASuperProperty.m in Sources */,
@@ -2083,7 +1947,6 @@
 				04AC05CD279A4B4B00703C2D /* ZAEventIdentifier.m in Sources */,
 				04AC05AA279A4B4A00703C2D /* UIView+ZAVisualProperties.m in Sources */,
 				04AC05B4279A4B4A00703C2D /* ZAVisualizedConnection.m in Sources */,
-				04AC0684279EB19D00703C2D /* ZAAppExtensionDataManager.m in Sources */,
 				041C5463277EFCB800EB4038 /* ZATrackerApp.m in Sources */,
 				04AC061C279A4B4B00703C2D /* UNUserNotificationCenter+PushClick.m in Sources */,
 				04AC05EA279A4B4B00703C2D /* ZARemoteConfigModel.m in Sources */,
@@ -2175,7 +2038,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AC067E279EB18800703C2D /* ZAAppExtensionDataManager.m in Sources */,
+				04BC11F727B20BE000AC0997 /* ZAAppExtensionDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2210,72 +2073,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		041C532A277AB08800EB4038 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		041C532B277AB08800EB4038 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		045D169A277316B800FDD90B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		045D169B277316B800FDD90B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		045D16A12773173700FDD90B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		045D16A22773173700FDD90B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		045D16A62773184800FDD90B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				ENABLE_BITCODE = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		045D16A72773184800FDD90B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				ENABLE_BITCODE = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		CB30BD5A22840CA40004061D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2564,42 +2361,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		041C532C277AB08800EB4038 /* Build configuration list for PBXAggregateTarget "ZallDataSDKDoc" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				041C532A277AB08800EB4038 /* Debug */,
-				041C532B277AB08800EB4038 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		045D169C277316B800FDD90B /* Build configuration list for PBXAggregateTarget "AutoS&ASDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				045D169A277316B800FDD90B /* Debug */,
-				045D169B277316B800FDD90B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		045D16A02773173700FDD90B /* Build configuration list for PBXAggregateTarget "AutoZallDataSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				045D16A12773173700FDD90B /* Debug */,
-				045D16A22773173700FDD90B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		045D16A52773184800FDD90B /* Build configuration list for PBXAggregateTarget "AutoPageck" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				045D16A62773184800FDD90B /* Debug */,
-				045D16A72773184800FDD90B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		CB30BD4E22840CA40004061D /* Build configuration list for PBXProject "ZallDataSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

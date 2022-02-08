@@ -26,7 +26,10 @@
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 
 #import "ZallDataSDK+ZAPrivate.h"
+
+#if __has_include("ZAAppExtensionDataManager.h")
 #import "ZAAppExtensionDataManager.h"
+#endif
 
 @implementation ZallDataSDK (ZATrack)
 
@@ -116,22 +119,31 @@
 #pragma mark track event
 
 - (void)trackEventFromExtensionWithGroupIdentifier:(NSString *)groupIdentifier completion:(void (^)(NSString *groupIdentifier, NSArray *events)) completion{
+    
     @try {
         if (groupIdentifier == nil || [groupIdentifier isEqualToString:@""]) {
             return;
         }
-
-        NSArray *eventArray = [[ZAAppExtensionDataManager sharedInstance] readAllEventsWithGroupIdentifier:groupIdentifier];
-        if (eventArray) {
-            for (NSDictionary *dict in eventArray) {
-                ZAEventCustomTrackObject *object = [[ZAEventCustomTrackObject alloc] initWithEventId:dict[kZAEventName]];
-                [self asyncTrackEventObject:object properties:dict[kZAEventProperties]];
+        id appExtension = za_quick_get_method(@"ZAAppExtensionDataManager", @"sharedInstance");
+        if (appExtension) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+            NSArray *eventArray = [appExtension performSelector:@selector(readAllEventsWithGroupIdentifier:) withObject:groupIdentifier];
+            if (eventArray) {
+                for (NSDictionary *dict in eventArray) {
+                    ZAEventCustomTrackObject *object = [[ZAEventCustomTrackObject alloc] initWithEventId:dict[kZAEventName]];
+                    [self asyncTrackEventObject:object properties:dict[kZAEventProperties]];
+                }
+                [appExtension performSelector:@selector(deleteEventsWithGroupIdentifier:) withObject:groupIdentifier];
+                
+                if (completion) {
+                    completion(groupIdentifier, eventArray);
+                }
             }
-            [[ZAAppExtensionDataManager sharedInstance] deleteEventsWithGroupIdentifier:groupIdentifier];
-            if (completion) {
-                completion(groupIdentifier, eventArray);
-            }
+#pragma clang diagnostic pop
         }
+        
+        
  
     } @catch (NSException *exception) {
         ZALogError(@"%@ error: %@", self, exception);

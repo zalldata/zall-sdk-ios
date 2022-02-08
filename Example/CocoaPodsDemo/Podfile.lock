@@ -1,0 +1,63 @@
+PODS:
+  - ZallDataSDK/all (0.0.2):
+    - ZallDataSDK/AppPush
+    - ZallDataSDK/CAID
+    - ZallDataSDK/Deeplink
+    - ZallDataSDK/default
+    - ZallDataSDK/DeviceOrientation
+    - ZallDataSDK/Exception
+    - ZallDataSDK/Location
+    - ZallDataSDK/Visualized
+  - ZallDataSDK/AppPush (0.0.2):
+    - ZallDataSDK/AutoTrack
+  - ZallDataSDK/AutoTrack (0.0.2):
+    - ZallDataSDK/Core
+    - ZallDataSDK/Extension
+  - ZallDataSDK/Base (0.0.2)
+  - ZallDataSDK/CAID (0.0.2):
+    - ZallDataSDK/Channel
+  - ZallDataSDK/Channel (0.0.2):
+    - ZallDataSDK/AutoTrack
+  - ZallDataSDK/Core (0.0.2)
+  - ZallDataSDK/DebugMode (0.0.2):
+    - ZallDataSDK/AutoTrack
+  - ZallDataSDK/Deeplink (0.0.2):
+    - ZallDataSDK/AutoTrack
+  - ZallDataSDK/default (0.0.2):
+    - ZallDataSDK/AutoTrack
+    - ZallDataSDK/Channel
+    - ZallDataSDK/DebugMode
+    - ZallDataSDK/Encrypt
+    - ZallDataSDK/Extension
+    - ZallDataSDK/RemoteConfig
+  - ZallDataSDK/DeviceOrientation (0.0.2):
+    - ZallDataSDK/Core
+  - ZallDataSDK/Encrypt (0.0.2):
+    - ZallDataSDK/AutoTrack
+  - ZallDataSDK/Exception (0.0.2):
+    - ZallDataSDK/AutoTrack
+  - ZallDataSDK/Extension (0.0.2):
+    - ZallDataSDK/Base
+  - ZallDataSDK/JSBridge (0.0.2):
+    - ZallDataSDK/AutoTrack
+  - ZallDataSDK/Location (0.0.2):
+    - ZallDataSDK/Core
+  - ZallDataSDK/RemoteConfig (0.0.2):
+    - ZallDataSDK/Core
+  - ZallDataSDK/Visualized (0.0.2):
+    - ZallDataSDK/JSBridge
+
+DEPENDENCIES:
+  - ZallDataSDK/all (from `../../`)
+  - ZallDataSDK/Extension (from `../../`)
+
+EXTERNAL SOURCES:
+  ZallDataSDK:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  ZallDataSDK: 935380264c858f2c2750e279a6c77f7f56947bc4
+
+PODFILE CHECKSUM: a54154f20025038a069057520f82c82fc74657ea
+
+COCOAPODS: 1.11.2

@@ -31,7 +31,6 @@
 #import "ZAQuickUtil.h"
 #import "ZAQueueManage.h"
 #import "ZAKeyChainItemWrapper.h"
-#import <UIKit/UIKit.h>
 
  
 @interface ZAIdentifier ()

@@ -1,0 +1,6 @@
+framework module ZallDataSDK {
+  umbrella header "ZallDataSDK-c0633d65-umbrella.h"
+
+  export *
+  module * { export * }
+}
