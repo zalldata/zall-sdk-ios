@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
     b.ios.resource = 'ZallDataSDK/ZallDataSDK.bundle'
     b.ios.frameworks = 'CoreTelephony'
   end
+
   # Core 模块
   s.subspec 'Core' do |b|
     core_dir = "ZallDataSDK/Core/**/"
@@ -61,7 +62,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'all' do |a|
-    a.dependency 'ZallDataSDK/default'
+    a.dependency 'ZallDataSDK/Default'
     a.dependency 'ZallDataSDK/CAID'
     a.dependency 'ZallDataSDK/Visualized'
     a.dependency 'ZallDataSDK/Location'
