@@ -4,10 +4,13 @@
 target 'ZallData' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'ZallDataSDK/all', :path=>'../../'
+#  pod 'ZallDataSDK', :path=>'../../'
+#  pod 'ZallDataSDK/Location', :path=>'../../'
+  pod 'ZallDataSDK/All', :path=>'../../'
+  
 
   # Pods for ZallData
-
+  
 end
 
 target 'ZallDataExtention' do
@@ -23,7 +26,7 @@ end
 target 'ZallDataSwift' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'ZallDataSDK/all', :path=>'../../'
+  pod 'ZallDataSDK/All', :path=>'../../'
 
   # Pods for ZallDataSwift
 

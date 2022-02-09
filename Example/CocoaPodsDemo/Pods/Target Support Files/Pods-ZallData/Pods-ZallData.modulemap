@@ -1,6 +1,0 @@
-framework module Pods_ZallData {
-  umbrella header "Pods-ZallData-umbrella.h"
-
-  export *
-  module * { export * }
-}

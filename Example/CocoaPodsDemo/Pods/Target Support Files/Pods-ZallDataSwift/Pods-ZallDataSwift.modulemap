@@ -1,6 +1,0 @@
-framework module Pods_ZallDataSwift {
-  umbrella header "Pods-ZallDataSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}

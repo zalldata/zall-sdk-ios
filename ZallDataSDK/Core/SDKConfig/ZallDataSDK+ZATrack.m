@@ -128,18 +128,23 @@
         if (appExtension) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-            NSArray *eventArray = [appExtension performSelector:@selector(readAllEventsWithGroupIdentifier:) withObject:groupIdentifier];
-            if (eventArray) {
-                for (NSDictionary *dict in eventArray) {
-                    ZAEventCustomTrackObject *object = [[ZAEventCustomTrackObject alloc] initWithEventId:dict[kZAEventName]];
-                    [self asyncTrackEventObject:object properties:dict[kZAEventProperties]];
-                }
-                [appExtension performSelector:@selector(deleteEventsWithGroupIdentifier:) withObject:groupIdentifier];
-                
-                if (completion) {
-                    completion(groupIdentifier, eventArray);
+            if ([appExtension respondsToSelector:@selector(readAllEventsWithGroupIdentifier:)]) {
+                NSArray *eventArray = [appExtension performSelector:@selector(readAllEventsWithGroupIdentifier:) withObject:groupIdentifier];
+                if (eventArray) {
+                    for (NSDictionary *dict in eventArray) {
+                        ZAEventCustomTrackObject *object = [[ZAEventCustomTrackObject alloc] initWithEventId:dict[kZAEventName]];
+                        [self asyncTrackEventObject:object properties:dict[kZAEventProperties]];
+                    }
+                    if ([appExtension respondsToSelector:@selector(deleteEventsWithGroupIdentifier:)]) {
+                        [appExtension performSelector:@selector(deleteEventsWithGroupIdentifier:) withObject:groupIdentifier];
+                    }
+                    
+                    if (completion) {
+                        completion(groupIdentifier, eventArray);
+                    }
                 }
             }
+            
 #pragma clang diagnostic pop
         }
         

@@ -1,118 +1,111 @@
-Pod::Spec.new do |s|
-  s.name         = "ZallDataSDK"
-  s.version      = "0.0.3"
-  s.summary      = "The official iOS SDK of zall Digital."
-  s.homepage     = "https://www.zalldigital.cn"
-  s.source       = { :git => 'https://github.com/zalldata/ZallDataSDK.git', :tag => "v#{s.version}" } 
-  s.license = { :type => "Apache License, Version 2.0" }
-  s.author = { "郭振涛" => "guozhentao@zalldigital.com" }
-  s.ios.deployment_target = '8.0'
-  s.default_subspec = 'Default'
-  s.frameworks = 'Foundation', 'SystemConfiguration'
-  s.libraries = 'icucore', 'sqlite3', 'z'
+Pod::Spec.new do |spec|
+  spec.name            = "ZallDataSDK"
+  spec.version         = "0.0.4"
+  spec.summary         = "The official iOS SDK of zall Digital."
+  spec.homepage        = "https://www.zalldigital.cn"
+  spec.source          = { :git => 'https://github.com/zalldata/ZallDataSDK.git', :tag => "v#{spec.version}", :submodules => true }
+  spec.license         = { :type => "Apache License, Version 2.0" }
+  spec.author          = { "郭振涛" => "guozhentao@zalldigital.com" }
+  spec.default_subspec = 'Default'
+  spec.frameworks      = 'Foundation', 'SystemConfiguration'
+  spec.libraries       = 'icucore', 'sqlite3', 'z'
+  spec.ios.deployment_target = '8.0'
 
-  # Base 模块
-  s.subspec 'Base' do |b|
+  # Core 模块
+  spec.subspec 'Core' do |core|
     core_dir = "ZallDataSDK/Core/**/"
-    b.source_files = core_dir + "*.{h,m}"
-    b.public_header_files = [
-      core_dir + "ZallDataSDK.h", 
-      core_dir + "ZallDataSDK+Business.h", 
-      core_dir + "ZAConfigOptions.h", 
-      core_dir + "ZallDataSDK+ZATrack.h", 
-      core_dir + "ZAConstantsDefin.h", 
+    core.source_files = core_dir + "*.{h,m}"
+    core.public_header_files = [
+      core_dir + "ZallDataSDK.h",
+      core_dir + "ZallDataSDK+Business.h",
+      core_dir + "ZAConfigOptions.h",
+      core_dir + "ZallDataSDK+ZATrack.h",
+      core_dir + "ZAConstantsDefin.h",
       core_dir + "ZAConstants.h",
       core_dir + "ZAConstantsEnum.h",
       core_dir + "ZASecurityPolicy.h"
     ]
-    b.exclude_files = [
+    core.exclude_files = [
       core_dir + "ZAAlertViewController.{h,m}",
-      core_dir + "UIView*.{h,m}",      
+      core_dir + "UIView*.{h,m}",
     ]
-    b.ios.resource = 'ZallDataSDK/ZallDataSDK.bundle'
-    b.ios.frameworks = 'CoreTelephony'
+    core.ios.resource = 'ZallDataSDK/ZallDataSDK.bundle'
+    core.ios.frameworks = 'CoreTelephony'
   end
 
   # Core 模块
-  s.subspec 'Core' do |b|
+  spec.subspec 'CoreApp' do |coreapp|
+    coreapp.dependency 'ZallDataSDK/Core'
     core_dir = "ZallDataSDK/Core/**/"
-    b.source_files = core_dir + "*.{h,m}"
-    b.public_header_files = [
-      core_dir + "ZallDataSDK.h", 
-      core_dir + "ZallDataSDK+Business.h", 
-      core_dir + "ZAConfigOptions.h", 
-      core_dir + "ZallDataSDK+ZATrack.h", 
-      core_dir + "ZAConstantsDefin.h", 
-      core_dir + "ZAConstants.h",
-      core_dir + "ZAConstantsEnum.h",
-      core_dir + "ZASecurityPolicy.h"
+    coreapp.source_files = [
+      core_dir + "ZAAlertViewController.{h,m}",
+      core_dir + "UIView*.{h,m}",
     ]
-    b.ios.resource = 'ZallDataSDK/ZallDataSDK.bundle'
-    b.ios.frameworks = 'CoreTelephony'
   end
 
-  # Default 加载所有模块
-  s.subspec 'Default' do |a|
-    a.dependency 'ZallDataSDK/AutoTrack'
-    a.dependency 'ZallDataSDK/Channel'
-    a.dependency 'ZallDataSDK/Encrypt'
-    a.dependency 'ZallDataSDK/DebugMode'
-    a.dependency 'ZallDataSDK/RemoteConfig'
-    a.dependency 'ZallDataSDK/Extension'
+  # Default 加载模块
+  spec.subspec 'Default' do |default|
+    default.dependency 'ZallDataSDK/AutoTrack'
+    default.dependency 'ZallDataSDK/Channel'
+    default.dependency 'ZallDataSDK/Encrypt'
+    default.dependency 'ZallDataSDK/DebugMode'
+    default.dependency 'ZallDataSDK/RemoteConfig'
+    default.dependency 'ZallDataSDK/Extension'
   end
-
-  s.subspec 'all' do |a|
-    a.dependency 'ZallDataSDK/Default'
-    a.dependency 'ZallDataSDK/CAID'
-    a.dependency 'ZallDataSDK/Visualized'
-    a.dependency 'ZallDataSDK/Location'
-    a.dependency 'ZallDataSDK/DeviceOrientation'
-    a.dependency 'ZallDataSDK/AppPush'
-    a.dependency 'ZallDataSDK/Exception'
-    a.dependency 'ZallDataSDK/Deeplink'
+  
+  # All 加载所有模块
+  spec.subspec 'All' do |all|
+    all.dependency 'ZallDataSDK/Default'
+    all.dependency 'ZallDataSDK/CAID'
+    all.dependency 'ZallDataSDK/Visualized'
+    all.dependency 'ZallDataSDK/Location'
+    all.dependency 'ZallDataSDK/DeviceOrientation'
+    all.dependency 'ZallDataSDK/AppPush'
+    all.dependency 'ZallDataSDK/Exception'
+    all.dependency 'ZallDataSDK/Deeplink'
   end
 
   # APP扩展
-  s.subspec 'Extension' do |b|
-    b.dependency 'ZallDataSDK/Base'
-    b.source_files = "ZallDataSDKExtension/*.{h,m}"   
-    b.public_header_files = [
+  spec.subspec 'Extension' do |extension|
+    extension.dependency 'ZallDataSDK/Core'
+    extension.source_files = "ZallDataSDKExtension/*.{h,m}"
+    extension.public_header_files = [
       'ZallDataSDKExtension/ZAAppExtensionDataManager.h',
       'ZallDataSDKExtension/ZallDataSDKExtension.h',
     ]
   end
 
   # 全埋点
-  s.subspec 'AutoTrack' do |b|
+  spec.subspec 'AutoTrack' do |auto_track|
     sub_dir = "ZallDataSDK/Modules/AutoTrack/**/"
-    b.dependency 'ZallDataSDK/Core'
-    b.dependency 'ZallDataSDK/Extension'
-    b.source_files = sub_dir + "*.{h,m}"
-    b.public_header_files = [
+    auto_track.dependency 'ZallDataSDK/CoreApp'
+    auto_track.dependency 'ZallDataSDK/Extension'
+    auto_track.source_files = sub_dir + "*.{h,m}"
+    auto_track.public_header_files = [
       sub_dir + 'ZallDataSDK+ZAAutoTrack.h',
       sub_dir + 'UIView+ZAProperty.h'
     ]
-    b.ios.frameworks = 'UIKit'
+    auto_track.ios.frameworks = 'UIKit'
   end
 
   # 渠道匹配
-  s.subspec 'Channel' do |b|
-    b.dependency 'ZallDataSDK/AutoTrack'
-    b.source_files = "ZallDataSDK/Modules/ChannelMatch/*.{h,m}"
-    b.public_header_files = 'ZallDataSDK/Modules/ChannelMatch/ZallDataSDK+ZAChannelMatch.h'
+  spec.subspec 'Channel' do |channel|
+    channel.dependency 'ZallDataSDK/AutoTrack'
+    channel.source_files = "ZallDataSDK/Modules/ChannelMatch/*.{h,m}"
+    channel.public_header_files = 'ZallDataSDK/Modules/ChannelMatch/ZallDataSDK+ZAChannelMatch.h'
   end
 
   # 支持 CAID 渠道匹配
-  s.subspec 'CAID' do |f|
-    f.dependency 'ZallDataSDK/Channel'
-    f.source_files = "ZallDataSDK/Modules/ChannelMatch/CAID/*.{h,m}"
+  spec.subspec 'CAID' do |caid|
+    caid.dependency 'ZallDataSDK/Channel'
+    caid.source_files = "ZallDataSDK/Modules/ChannelMatch/CAID/*.{h,m}"
   end
 
   # JS 交互
-  s.subspec 'JSBridge' do |f|
-    f.dependency 'ZallDataSDK/AutoTrack'
-    f.source_files = "ZallDataSDK/Modules/JSBridge/**/*.{h,m}"
-    f.public_header_files = [
+  spec.subspec 'JSBridge' do |js_bridge|
+    js_bridge.dependency 'ZallDataSDK/AutoTrack'
+    js_bridge.source_files = "ZallDataSDK/Modules/JSBridge/**/*.{h,m}"
+    js_bridge.public_header_files = [
       'ZallDataSDK/Modules/JSBridge/ZallDataSDK+ZAJSBridge.h',
       'ZallDataSDK/Modules/JSBridge/WKWebView+ZABridge.h',
       'ZallDataSDK/Modules/JSBridge/**/ZallDataSDK+WKWebView.h'
@@ -120,61 +113,64 @@ Pod::Spec.new do |s|
   end
 
   # 可视化相关功能，包含可视化全埋点和点击图
-  s.subspec 'Visualized' do |f|
-    f.dependency 'ZallDataSDK/JSBridge'
-    f.source_files = "ZallDataSDK/Modules/Visualized/**/*.{h,m}"
-    f.public_header_files = 'ZallDataSDK/Modules/Visualized/ZallDataSDK+ZAVisualized.h'
+  spec.subspec 'Visualized' do |visualized|
+    visualized.dependency 'ZallDataSDK/JSBridge'
+    visualized.source_files = "ZallDataSDK/Modules/Visualized/**/*.{h,m}"
+    visualized.public_header_files = 'ZallDataSDK/Modules/Visualized/ZallDataSDK+ZAVisualized.h'
   end
 
   # 开启 GPS 定位采集
-  s.subspec 'Location' do |f|
-    f.frameworks = 'CoreLocation'
-    f.dependency 'ZallDataSDK/Core'
-    f.source_files = "ZallDataSDK/Modules/Location/*.{h,m}"
-    f.public_header_files = 'ZallDataSDK/Modules/Location/ZallDataSDK+ZALocation.h'
+  spec.subspec 'Location' do |location|
+    location.frameworks = 'CoreLocation'
+    location.dependency 'ZallDataSDK/CoreApp'
+    location.dependency 'ZallDataSDK/Extension'
+    location.source_files = "ZallDataSDK/Modules/Location/*.{h,m}"
+    location.public_header_files = 'ZallDataSDK/Modules/Location/ZallDataSDK+ZALocation.h'
   end
 
   # 开启设备方向采集
-  s.subspec 'DeviceOrientation' do |f|
-    f.dependency 'ZallDataSDK/Core'
-    f.source_files = 'ZallDataSDK/Modules/DeviceOrientation/**/*.{h,m}'
-    f.public_header_files = 'ZallDataSDK/Modules/DeviceOrientation/ZallDataSDK+ZADeviceOrientation.h'
-    f.frameworks = 'CoreMotion'
+  spec.subspec 'DeviceOrientation' do |orientation|
+    orientation.dependency 'ZallDataSDK/CoreApp'
+    orientation.dependency 'ZallDataSDK/Extension'
+
+    orientation.source_files = 'ZallDataSDK/Modules/DeviceOrientation/**/*.{h,m}'
+    orientation.public_header_files = 'ZallDataSDK/Modules/DeviceOrientation/ZallDataSDK+ZADeviceOrientation.h'
+    orientation.frameworks = 'CoreMotion'
   end
 
   # 推送点击
-  s.subspec 'AppPush' do |f|
-    f.dependency 'ZallDataSDK/AutoTrack'
-    f.source_files = "ZallDataSDK/Modules/AppPush/**/*.{h,m}"
-    f.public_header_files = 'ZallDataSDK/Modules/AppPush/ZallDataSDK+ZAAppPush.h'
+  spec.subspec 'AppPush' do |app_push|
+    app_push.dependency 'ZallDataSDK/AutoTrack'
+    app_push.source_files = "ZallDataSDK/Modules/AppPush/**/*.{h,m}"
+    app_push.public_header_files = 'ZallDataSDK/Modules/AppPush/ZallDataSDK+ZAAppPush.h'
   end
 
   # 使用崩溃事件采集
-  s.subspec 'Exception' do |e|
-    e.dependency 'ZallDataSDK/AutoTrack'
-    e.source_files  =  "ZallDataSDK/Modules/Exception/**/*.{h,m}"
-    e.public_header_files = 'ZallDataSDK/Modules/Exception/ZallDataSDK+ZAException.h'
+  spec.subspec 'Exception' do |exception|
+    exception.dependency 'ZallDataSDK/AutoTrack'
+    exception.source_files  =  "ZallDataSDK/Modules/Exception/**/*.{h,m}"
+    exception.public_header_files = 'ZallDataSDK/Modules/Exception/ZallDataSDK+ZAException.h'
   end
 
   # DebugMode
-  s.subspec 'DebugMode' do |e|
-    e.dependency 'ZallDataSDK/AutoTrack'
-    e.source_files  =  "ZallDataSDK/Modules/DebugMode/**/*.{h,m}"
-    e.public_header_files = 'ZallDataSDK/Modules/DebugMode/ZallDataSDK+ZADebugMode.h'
+  spec.subspec 'DebugMode' do |debug_mode|
+    debug_mode.dependency 'ZallDataSDK/AutoTrack'
+    debug_mode.source_files  =  "ZallDataSDK/Modules/DebugMode/**/*.{h,m}"
+    debug_mode.public_header_files = 'ZallDataSDK/Modules/DebugMode/ZallDataSDK+ZADebugMode.h'
   end
 
   # Deeplink
-  s.subspec 'Deeplink' do |e|
-    e.dependency 'ZallDataSDK/AutoTrack'
-    e.source_files  =  "ZallDataSDK/Modules/Deeplink/**/*.{h,m}"
-    e.public_header_files = 'ZallDataSDK/Modules/Deeplink/ZallDataSDK+ZADeeplink.h'
+  spec.subspec 'Deeplink' do |deeplink|
+    deeplink.dependency 'ZallDataSDK/AutoTrack'
+    deeplink.source_files  =  "ZallDataSDK/Modules/Deeplink/**/*.{h,m}"
+    deeplink.public_header_files = 'ZallDataSDK/Modules/Deeplink/ZallDataSDK+ZADeeplink.h'
   end
   
   # Encrypt
-  s.subspec 'Encrypt' do |e|
-    e.dependency 'ZallDataSDK/AutoTrack'
-    e.source_files  =  "ZallDataSDK/Modules/Encrypt/**/*.{h,m}"
-    e.public_header_files = [
+  spec.subspec 'Encrypt' do |encrypt|
+    encrypt.dependency 'ZallDataSDK/AutoTrack'
+    encrypt.source_files  =  "ZallDataSDK/Modules/Encrypt/**/*.{h,m}"
+    encrypt.public_header_files = [
       'ZallDataSDK/Modules/Encrypt/ZallDataSDK+ZAEncrypt.h',
       'ZallDataSDK/Modules/Encrypt/ZAEncryptProtocol.h',
       'ZallDataSDK/Modules/Encrypt/ZASecretKey.h'
@@ -182,10 +178,10 @@ Pod::Spec.new do |s|
   end
 
   # RemoteConfig
-  s.subspec 'RemoteConfig' do |e|
-    e.dependency 'ZallDataSDK/Core'
-    e.source_files  =  "ZallDataSDK/Modules/RemoteConfig/**/*.{h,m}"
-    e.public_header_files = 'ZallDataSDK/Modules/RemoteConfig/ZallDataSDK+ZARemoteConfig.h'
+  spec.subspec 'RemoteConfig' do |remote_config|
+    remote_config.dependency 'ZallDataSDK/AutoTrack'
+    remote_config.source_files  =  "ZallDataSDK/Modules/RemoteConfig/**/*.{h,m}"
+    remote_config.public_header_files = 'ZallDataSDK/Modules/RemoteConfig/ZallDataSDK+ZARemoteConfig.h'
   end
 
 end
