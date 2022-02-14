@@ -56,7 +56,7 @@ Pod::Spec.new do |spec|
   # All 加载所有模块
   spec.subspec 'All' do |all|
     all.dependency 'ZallDataSDK/Default'
-    all.dependency 'ZallDataSDK/CAID'
+    all.dependency 'ZallDataSDK/Channel'
     all.dependency 'ZallDataSDK/Visualized'
     all.dependency 'ZallDataSDK/Location'
     all.dependency 'ZallDataSDK/DeviceOrientation'
@@ -93,12 +93,6 @@ Pod::Spec.new do |spec|
     channel.dependency 'ZallDataSDK/AutoTrack'
     channel.source_files = "ZallDataSDK/Modules/ChannelMatch/*.{h,m}"
     channel.public_header_files = 'ZallDataSDK/Modules/ChannelMatch/ZallDataSDK+ZAChannelMatch.h'
-  end
-
-  # 支持 CAID 渠道匹配
-  spec.subspec 'CAID' do |caid|
-    caid.dependency 'ZallDataSDK/Channel'
-    caid.source_files = "ZallDataSDK/Modules/ChannelMatch/CAID/*.{h,m}"
   end
 
   # JS 交互

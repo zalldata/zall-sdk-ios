@@ -217,7 +217,6 @@ NSString * const kZAEventPropertyChannelCallbackEvent = @"$is_channel_callback_e
 
 - (NSString *)appInstallSource {
     NSMutableDictionary *sources = [NSMutableDictionary dictionary];
-    [sources addEntriesFromDictionary:[self CAIDInfo]];
     sources[@"idfa"] = [ZAQuickUtil idfa];
     sources[@"idfv"] = [ZAQuickUtil idfv];
     NSMutableArray *result = [NSMutableArray array];
@@ -226,16 +225,6 @@ NSString * const kZAEventPropertyChannelCallbackEvent = @"$is_channel_callback_e
     }
     return [result componentsJoinedByString:@"##"];
 }
-
-- (NSDictionary *)CAIDInfo {
-    Class cla = NSClassFromString(@"ZACAIDUtils");
-    SEL sel = NSSelectorFromString(@"CAIDInfo");
-    if ([cla respondsToSelector:sel]) {
-        return ((NSDictionary * (*)(id, SEL))[cla methodForSelector:sel])(cla, sel);
-    }
-    return nil;
-}
-
 #pragma mark - 附加渠道信息
 - (void)trackChannelWithEventObject:(ZAEventBaseObject *)obj properties:(nullable NSDictionary *)propertyDict {
     if (self.configOptions.enableAutoAddChannelCallbackEvent) {
