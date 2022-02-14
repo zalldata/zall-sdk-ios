@@ -139,7 +139,7 @@ NSString * const kZAEventPropertyChannelCallbackEvent = @"$is_channel_callback_e
 
 /// 当前获取到的设备 ID 为有效值
 - (BOOL)isValidOfDeviceInfo {
-    return ([ZAQuickUtil idfa].length > 0 || [self CAIDInfo].allKeys > 0);
+    return ([ZAQuickUtil idfa].length > 0);
 }
 
 - (BOOL)isTrackedAppInstallWithDisableCallback:(BOOL)disableCallback {
