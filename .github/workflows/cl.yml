@@ -1,0 +1,33 @@
+name: "ZallDataSDK CI"
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+  pull_request:
+    branches:
+      - "*"
+jobs:
+  Build:
+    name: carthage build
+    runs-on: macos-11
+    env:
+      SCHEME_NAME: ZallDataSDK
+      DEVELOPER_DIR: /Applications/Xcode_13.0.app
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build as static Library # carthage build --archive
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          carthage build --archive
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ${{ env.SCHEME_NAME }}.framework.zip
