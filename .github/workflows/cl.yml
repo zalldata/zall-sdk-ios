@@ -39,6 +39,7 @@ jobs:
           files: ${{ env.SCHEME_NAME }}.framework.zip
 
       - name: Deploy to Cocoapods
+        uses: michaelhenry/deploy-to-cocoapods-github-action@1.0.10
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           set -eo pipefail
