@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name            = "ZallDataSDK"
-  spec.version         = "0.0.5"
+  spec.version         = ENV['LIB_VERSION']
   spec.summary         = "The official iOS SDK of zall Digital."
   spec.homepage        = "https://www.zalldigital.cn"
   spec.source          = { :git => 'https://github.com/zalldata/ZallDataSDK.git', :tag => "v#{spec.version}", :submodules => true }
