@@ -22,6 +22,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Sync Library Version
+        run: |
+          export git_version=$(git describe --tags `git rev-list --tags --max-count=1` | grep -o "\d.*")
+          agvtool new-version -all $git_version
+
       - name: Build as static Library # carthage build --archive
         if: startsWith(github.ref, 'refs/tags/')
         run: |
@@ -37,7 +42,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           set -eo pipefail
-          export LIB_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
+          export LIB_VERSION=$(git describe --tags `git rev-list --tags --max-count=1` | grep -o "\d.*")
           pod lib lint --allow-warnings
           pod trunk push --allow-warnings
         env:
