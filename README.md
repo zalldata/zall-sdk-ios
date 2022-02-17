@@ -15,7 +15,7 @@ iOS 8.0 及以上，Xcode 9.0 及以上。
 请参考卓尔官网 [iOS SDK 集成文档](http://anamanual.zalldata.cn/sdk/clientsdk/iossdk.html)。
 ## 源码文档
 
-请参考 [iOS SDK 源码文档](https://zalldata.github.io/TestActions/)
+请参考 [iOS SDK 源码文档](https://zalldata.github.io/ZallDataSDK/)
 
 ## 规划
 
