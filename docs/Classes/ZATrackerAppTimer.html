@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>ZATrackerAppTimer Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">ZallDataSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">zall</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/clearAllEventTimers">- clearAllEventTimers</option>
+		
+		<option value="//api/name/eventDurationFromEventId:currentSysUpTime:">- eventDurationFromEventId:currentSysUpTime:</option>
+		
+		<option value="//api/name/eventNameFromEventId:">- eventNameFromEventId:</option>
+		
+		<option value="//api/name/generateEventIdByEventName:">- generateEventIdByEventName:</option>
+		
+		<option value="//api/name/pauseAllEventTimers:">- pauseAllEventTimers:</option>
+		
+		<option value="//api/name/resumeAllEventTimers:">- resumeAllEventTimers:</option>
+		
+		<option value="//api/name/trackTimerPause:currentSysUpTime:">- trackTimerPause:currentSysUpTime:</option>
+		
+		<option value="//api/name/trackTimerRemove:">- trackTimerRemove:</option>
+		
+		<option value="//api/name/trackTimerResume:currentSysUpTime:">- trackTimerResume:currentSysUpTime:</option>
+		
+		<option value="//api/name/trackTimerStart:currentSysUpTime:">- trackTimerStart:currentSysUpTime:</option>
+		
+		<option value="//api/name/trackTimerStart:timeUnit:currentSysUpTime:">- trackTimerStart:timeUnit:currentSysUpTime:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">ZATrackerAppTimer Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>ZATrackerAppTimer.h<br />ZATrackerAppTimer.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/generateEventIdByEventName:" title="generateEventIdByEventName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/generateEventIdByEventName:">&ndash;&nbsp;generateEventIdByEventName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+生成事件计时的 eventId</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)generateEventIdByEventName:(NSString *)<em>eventName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>eventName</code></th>
+						<td><p>开始计时的事件名</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>计时事件的 eventId</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+生成事件计时的 eventId</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/trackTimerStart:currentSysUpTime:" title="trackTimerStart:currentSysUpTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackTimerStart:currentSysUpTime:">&ndash;&nbsp;trackTimerStart:currentSysUpTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+开始事件计时</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)trackTimerStart:(NSString *)<em>eventId</em> currentSysUpTime:(UInt64)<em>currentSysUpTime</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>eventId</code></th>
+						<td><p>开始计时的事件名或 eventId</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+开始事件计时</p>
+
+<p>@discussion
+多次调用 trackTimerStart: 时，以最后一次调用为准。</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/trackTimerStart:timeUnit:currentSysUpTime:" title="trackTimerStart:timeUnit:currentSysUpTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackTimerStart:timeUnit:currentSysUpTime:">&ndash;&nbsp;trackTimerStart:timeUnit:currentSysUpTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+为了兼容废弃接口功能提供 timeUnit 入参</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)trackTimerStart:(NSString *)<em>eventId</em> timeUnit:(ZATrackTimeUnitState)<em>timeUnit</em> currentSysUpTime:(UInt64)<em>currentSysUpTime</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>eventId</code></th>
+						<td><p>开始计时的事件名或 eventId</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>timeUnit</code></th>
+						<td><p>计时单位，毫秒/秒/分钟/小时</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+为了兼容废弃接口功能提供 timeUnit 入参</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/trackTimerPause:currentSysUpTime:" title="trackTimerPause:currentSysUpTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackTimerPause:currentSysUpTime:">&ndash;&nbsp;trackTimerPause:currentSysUpTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+暂停事件计时</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)trackTimerPause:(NSString *)<em>eventId</em> currentSysUpTime:(UInt64)<em>currentSysUpTime</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>eventId</code></th>
+						<td><p>trackTimerStart: 返回的 ID 或事件名</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+暂停事件计时</p>
+
+<p>@discussion
+多次调用 trackTimerPause: 时，以首次调用为准。</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/trackTimerResume:currentSysUpTime:" title="trackTimerResume:currentSysUpTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackTimerResume:currentSysUpTime:">&ndash;&nbsp;trackTimerResume:currentSysUpTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+恢复事件计时</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)trackTimerResume:(NSString *)<em>eventId</em> currentSysUpTime:(UInt64)<em>currentSysUpTime</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>eventId</code></th>
+						<td><p>trackTimerStart: 返回的 ID 或事件名</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+恢复事件计时</p>
+
+<p>@discussion
+多次调用 trackTimerResume: 时，以首次调用为准。</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/trackTimerRemove:" title="trackTimerRemove:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackTimerRemove:">&ndash;&nbsp;trackTimerRemove:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+删除事件计时</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)trackTimerRemove:(NSString *)<em>eventId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>eventId</code></th>
+						<td><p>trackTimerStart: 返回的 ID 或事件名</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+删除事件计时</p>
+
+<p>@discussion
+多次调用 trackTimerRemove: 时，只有首次调用有效。</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/eventNameFromEventId:" title="eventNameFromEventId:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/eventNameFromEventId:">&ndash;&nbsp;eventNameFromEventId:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+获取计时事件原始事件名</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)eventNameFromEventId:(NSString *)<em>eventId</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>eventId</code></th>
+						<td><p>trackTimerStart: 返回的 ID 或事件名</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>计时事件的原始事件名</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+获取计时事件原始事件名</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/eventDurationFromEventId:currentSysUpTime:" title="eventDurationFromEventId:currentSysUpTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/eventDurationFromEventId:currentSysUpTime:">&ndash;&nbsp;eventDurationFromEventId:currentSysUpTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+获取事件时长</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable NSNumber *)eventDurationFromEventId:(NSString *)<em>eventId</em> currentSysUpTime:(UInt64)<em>currentSysUpTime</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>eventId</code></th>
+						<td><p>trackTimerStart: 返回的 ID 或事件名</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>currentSysUpTime</code></th>
+						<td><p>当前系统启动时间</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>计时事件的时长</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+获取事件时长</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pauseAllEventTimers:" title="pauseAllEventTimers:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pauseAllEventTimers:">&ndash;&nbsp;pauseAllEventTimers:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+暂停所有计时事件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)pauseAllEventTimers:(UInt64)<em>currentSysUpTime</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+暂停所有计时事件</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resumeAllEventTimers:" title="resumeAllEventTimers:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resumeAllEventTimers:">&ndash;&nbsp;resumeAllEventTimers:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+恢复所有计时事件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)resumeAllEventTimers:(UInt64)<em>currentSysUpTime</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+恢复所有计时事件</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clearAllEventTimers" title="clearAllEventTimers"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clearAllEventTimers">&ndash;&nbsp;clearAllEventTimers</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@abstract
+清除所有计时事件</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)clearAllEventTimers</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@abstract
+清除所有计时事件</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">ZATrackerAppTimer.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2022 zall. All rights reserved. Updated: 2022-02-17</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

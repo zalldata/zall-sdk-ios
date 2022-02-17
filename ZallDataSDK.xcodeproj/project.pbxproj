@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		04C3F66527BDFB96008D5635 /* Docs */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 04C3F66827BDFB96008D5635 /* Build configuration list for PBXAggregateTarget "Docs" */;
+			buildPhases = (
+				04C3F66927BDFB9F008D5635 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Docs;
+			productName = Docs;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		041C5346277AFC5200EB4038 /* ZARefactorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5345277AFC5200EB4038 /* ZARefactorTestCase.m */; };
 		041C5384277BFBC400EB4038 /* ZAUtilCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5377277BFBC400EB4038 /* ZAUtilCheck.m */; };
@@ -1784,6 +1798,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Zall Data Co., Ltd";
 				TargetAttributes = {
+					04C3F66527BDFB96008D5635 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					CB30BD5322840CA40004061D = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1250;
@@ -1812,6 +1829,7 @@
 				CB30BD5322840CA40004061D /* ZallDataSDK */,
 				CB30C30E22843D3A0004061D /* ZallDataSDKExtension */,
 				CB6EBAE2228551EC003CFBA8 /* ZallDataSDKTests */,
+				04C3F66527BDFB96008D5635 /* Docs */,
 			);
 		};
 /* End PBXProject section */
@@ -1858,6 +1876,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+		04C3F66927BDFB9F008D5635 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nappledoc --no-create-docset --output . --project-name ZallDataSDK --project-company \"zall\" --company-id \"com.zalldata.sdk\" .\nrm -rf docs\nmv html docs\nexit 0\n#mv -f html docs\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2056,6 +2091,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		04C3F66627BDFB96008D5635 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04C3F66727BDFB96008D5635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CB30BD5A22840CA40004061D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2345,6 +2396,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04C3F66827BDFB96008D5635 /* Build configuration list for PBXAggregateTarget "Docs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C3F66627BDFB96008D5635 /* Debug */,
+				04C3F66727BDFB96008D5635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CB30BD4E22840CA40004061D /* Build configuration list for PBXProject "ZallDataSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

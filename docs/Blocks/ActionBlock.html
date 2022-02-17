@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>ActionBlock Block Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">ZallDataSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">zall</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">ActionBlock Block Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declared in</th>
+	<td>ZASDKAction.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+
+                    
+                    
+          
+          <a title="Block Definition" name="instance_methods"></a>
+          <h4 class="method-subtitle parameter-title">Block Definition</h4>
+          <h3 class="subsubtitle method-title">ActionBlock</h3>
+
+
+<code>typedef void (^ActionBlock) (void ), ; NS_INLINE, void zaprintf, ( id, obj ), { NSLog, ( @, "%@" ,, obj ), ; }, @interface NSDictionary, ( category, ) -, ( id, ) firstValue, ; -, ( id, ) firstKey, ; @end, @implementation NSDictionary, ( category, ) -, ( id, ) firstValue, { return, self ., allValues ., firstObject ;, } -, ( id, ) firstKey, { return, self ., allKeys ., firstObject ;, } @end, @interface ZASDKAction, ( ), @property (, nonatomic ,, strong ), NSArray *list, ; @end, @implementation ZASDKAction, + (, NSArray <, NSDictionary <, NSString *,, NSArray *>, * >, * ), sdkDataList {, NSArray *array, = @, [ @, { @, "公共属性" :, [ self, publicAttribute ], } ,, @ {, @ "loginId", : [, self loginId, ] }, @ {, @ "匿名ID", : [, self anonymousID, ] }, @ {, @ "Bind", : [, self bind, ] }, @ {, @ "Item", : [, self item, ] }, @ {, @ "UserProfile", : [, self userProfile, ] }, @ {, @ "TrackTimer", : [, self trackTimer, ] }, @ {, @ "track event", : [, self trackEvent, ] }, @ {, @ "TrackView", : [, self trackView, ] }, @ {, @ "渠道", : [, self trackChannel, ] }, @ {, @ "DebugMode", : [, self debugMode, ] }, @ {, @ "Deeplink", : [, self deeplink, ] }, @ {, @ "设备方向", : [, self screenOrientation, ] }, @ {, @ "JavaScript", : [, self javascript, ] }, @ {, @ "Location", : [, self location, ] }, @ {, @ "远程配置", : [, self remoteConfig, ] }, @ {, @ "可视化", : [, self visualized, ] }, @ {, @ "HeatMap", : [, self heatMap, ] }, ] ;, return array, ; }, # pragma, mark -, 公共属性 +, ( NSArray, * ), publicAttribute {, return @, [ @, { @, "返回预置的属性" :, ^ {, zaprintf (, [ SharedZallDataSDK, ( ), getPresetProperties ], ) ;, } }, @ {, @ "注册公共属性", : ^, { NSDictionary, * dict, = @, { @, "key_first" :, @ "value_first", } ;, [ SharedZallDataSDK, ( ), registerSuperProperties :, dict ], ; }, } ,, @ {, @ "动态公共属性", : ^, { __block, NSDictionary *dict, = @, { @, "key_dy_first" :, @ "value_dy_first", } ;, [ SharedZallDataSDK, ( ), registerDynamicSuperProperties :, ^ NSDictionary, < NSString, * ,, id >, * _Nonnull, { return, dict ;, } ], ; }, } ,, @ {, @ "注销公共属性", : ^, { [, SharedZallDataSDK (, ) unregisterSuperProperty, : @, "key_first" ], ; }, } ,, @ {, @ "清空公共属性", : ^, { [, SharedZallDataSDK (, ) clearSuperProperties, ] ;, } }, @ {, @ "获取当前公共属性", : ^, { zaprintf, ( [, SharedZallDataSDK (, ) currentSuperProperties, ] ), ; }, } ], ; }, # pragma, mark -, loginId +, ( NSArray, * ), loginId {, return @, [ @, { @, "设置当前用户的 loginId" :, ^ {, [ SharedZallDataSDK, ( ), login :, @ "1234567890", ] ;, } }, @ {, @ "获取当前用户ID", : ^, { zaprintf, ( [, SharedZallDataSDK (, ) loginId, ] ), ; }, } ,, @ {, @ "当前用户的 loginId 并添加扩招属性", : ^, { NSDictionary, * dict, = @, { @, "username" :, @ "666", } ;, [ SharedZallDataSDK, ( ), login :, @ "9876543210", withProperties :, dict ], ; }, } ,, @ {, @ "注销，清空当前用户的 loginId", : ^, { [, SharedZallDataSDK (, ) logout, ] ;, } }, ] ;, } #, pragma mark, - anonymousID, + (, NSArray *), anonymousID {, return @, [ @, { @, "获取用户的唯一用户标识" :, ^ {, zaprintf (, [ SharedZallDataSDK, ( ), distinctId ], ) ;, } }, @ {, @ "获取匿名 id", : ^, { zaprintf, ( [, SharedZallDataSDK (, ) anonymousId, ] ), ; }, } ,, @ {, @ "重置默认匿名 id", : ^, { [, SharedZallDataSDK (, ) resetAnonymousId, ] ;, } }, @ {, @ "指定匿名ID", : ^, { [, SharedZallDataSDK (, ) identify, : @, "3333" ], ; }, } ,, ] ;, } #, pragma mark, - Bind, + (, NSArray *), bind {, return @, [ @, { @, "绑定" :, ^ {, [ SharedZallDataSDK, ( ), bind :, @ "bind_key", value :, @ "bind_value", ] ;, } }, @ {, @ "解绑", : ^, { [, SharedZallDataSDK (, ) unbind, : @, "bing_key" value, : @, "bind_value" ], ; }, } ], ; }, # pragma, mark -, Item +, ( NSArray, * ), item {, return @, [ @, { @, "设置 item" :, ^ {, [ SharedZallDataSDK, ( ), itemSetWithType :, @ "item", itemId :, @ "1", properties :, @ {, @ "name1", : @, "Item1" ,, @ "name2", : @, "Item2" }, ] ;, } }, @ {, @ "删除 item", : ^, { [, SharedZallDataSDK (, ) itemDeleteWithType, : @, "item" itemId, : @, "1" ], ; }, } ], ; }, # pragma, mark -, UserProfile +, ( NSArray, * ), userProfile {, return @, [ @, { @, "设置用户的一个或者几个 Profiles" :, ^ {, [ SharedZallDataSDK, ( ), set :, @ {, @ "Profiles1", : @, "Profiles1" ,, @ "Profiles2", : @, { @, "Profiles2_1" :, @ "Profiles2_1", @ "Profiles2_2", : @, "Profiles2_2" ,, @ "Profiles2_3", : @, { @, "Profiles2_3_1" :, @ "Profiles2_3_1", @ "Profiles2_3_2", : @, "Profiles2_3_2" ,, } }, } ], ; }, } ,, @ {, @ "设置用户的pushId", : ^, { [, SharedZallDataSDK (, ) profilePushKey, : @, "pushkey1" pushId, : @, "pushId1" ], ; }, } ,, @ {, @ "删除用户设置的 pushId", : ^, { [, SharedZallDataSDK (, ) profileUnsetPushKey, : @, "pushkey1" ], ; }, } ,, @ {, @ "首次设置用户Profiles", : ^, { [, SharedZallDataSDK (, ) setOnce, : @, { @, "OnceProfiles1" :, @ "OnceProfiles1", @ "OnceProfiles2", : @, { @, "OnceProfiles2_1" :, @ "OnceProfiles2_1", @ "OnceProfiles2_2", : @, "OnceProfiles2_2" ,, @ "OnceProfiles2_3", : @, { @, "OnceProfiles2_3_1" :, @ "OnceProfiles2_3_1", @ "OnceProfiles2_3_2", : @, "OnceProfiles2_3_2" ,, } }, } ], ; }, } ,, @ {, @ "设置用户的单个 Profile", : ^, { [, SharedZallDataSDK (, ) set, : @, "Profiles1" to, : @, { @, "Profiles1" :, @ "Profiles1", @ "Profiles2", : @, { @, "Profiles2_1" :, @ "Profiles2_1", @ "Profiles2_2", : @, "Profiles2_2" ,, @ "Profiles2_3", : @, { @, "Profiles2_3_1" :, @ "Profiles2_3_1", @ "Profiles2_3_2", : @, "Profiles2_3_2" ,, } }, } ], ; }, } ,, @ {, @ "首次设置用户的单个 Profile 的内容", : ^, { [, SharedZallDataSDK (, ) setOnce, : @, "OnceProfiles1" to, : @, { @, "OnceProfiles1" :, @ "OnceProfiles1", @ "OnceProfiles2", : @, { @, "OnceProfiles2_1" :, @ "OnceProfiles2_1", @ "OnceProfiles2_2", : @, "OnceProfiles2_2" ,, @ "OnceProfiles2_3", : @, { @, "OnceProfiles2_3_1" :, @ "OnceProfiles2_3_1", @ "OnceProfiles2_3_2", : @, "OnceProfiles2_3_2" ,, } }, } ], ; }, } ,, @ {, @ "删除某个 Profile 的全部内容", : ^, { [, SharedZallDataSDK (, ) unset, : @, "Profiles1" ], ; }, } ,, @ {, @ "给一个数值类型的 Profile 增加一个数值", : ^, { [, SharedZallDataSDK (, ) increment, : @, "increment" by, : @, ( 1, ) ], ; }, } ,, @ {, @ "给多个数值类型的 Profile 增加数值", : ^, { [, SharedZallDataSDK ()</code>
+  
+  
+  
+  
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2022 zall. All rights reserved. Updated: 2022-02-17</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
