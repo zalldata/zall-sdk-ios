@@ -2240,7 +2240,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_MASTER_OBJECT_FILE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/ZallDataSDK-Info.plist";
+				INFOPLIST_FILE = "SupportingFiles/ZallDataSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2277,7 +2277,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_MASTER_OBJECT_FILE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/ZallDataSDK-Info.plist";
+				INFOPLIST_FILE = "SupportingFiles/ZallDataSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2310,7 +2310,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/ZallDataSDKExtension-Info.plist";
+				INFOPLIST_FILE = "SupportingFiles/ZallDataSDKExtension-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2340,7 +2340,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/ZallDataSDKExtension-Info.plist";
+				INFOPLIST_FILE = "SupportingFiles/ZallDataSDKExtension-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

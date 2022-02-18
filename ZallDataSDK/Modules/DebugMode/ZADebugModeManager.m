@@ -69,7 +69,9 @@
     _configOptions = configOptions;
     self.enable = configOptions.enableDebugMode;
 }
-
+- (ZADebugModeType)debugMode{
+    return self.enable?ZADebugModeTypeTrack:_debugMode;
+}
 #pragma mark - ZAOpenURLProtocol
 
 - (BOOL)canHandleURL:(nonnull NSURL *)url {
