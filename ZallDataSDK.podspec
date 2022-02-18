@@ -48,15 +48,14 @@ Pod::Spec.new do |spec|
     default.dependency 'ZallDataSDK/AutoTrack'
     default.dependency 'ZallDataSDK/Channel'
     default.dependency 'ZallDataSDK/Encrypt'
-    default.dependency 'ZallDataSDK/DebugMode'
-    default.dependency 'ZallDataSDK/RemoteConfig'
     default.dependency 'ZallDataSDK/Extension'
   end
   
   # All 加载所有模块
   spec.subspec 'All' do |all|
     all.dependency 'ZallDataSDK/Default'
-    all.dependency 'ZallDataSDK/Channel'
+    all.dependency 'ZallDataSDK/RemoteConfig'
+    all.dependency 'ZallDataSDK/DebugMode'
     all.dependency 'ZallDataSDK/Visualized'
     all.dependency 'ZallDataSDK/Location'
     all.dependency 'ZallDataSDK/DeviceOrientation'
