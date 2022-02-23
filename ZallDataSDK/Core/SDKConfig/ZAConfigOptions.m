@@ -90,9 +90,7 @@
 #if __has_include("ZallDataSDK+ZAAutoTrack.h")
     _tarckIntervalTime = 0.1;
 #endif
-#if __has_include("ZallDataSDK+ZAVisualized.h")
-    _enableVisualizedProperties = YES;
-#endif
+
 }
 
 -(void)setEnableLog:(BOOL)enableLog{
