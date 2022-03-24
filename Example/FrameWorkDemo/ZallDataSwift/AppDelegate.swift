@@ -48,11 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         options.enableDebugMode = true
         options.enableAutoAddChannelCallbackEvent = true;
         ZallDataSDK.completeConfigOption(options)
-        SharedZallDataSDK()?.addWebViewUserAgentZallDataFlag();
-        SharedZallDataSDK()?.enableTrackScreenOrientation(true)
-        SharedZallDataSDK()?.registerSuperProperties(["AAA":UIDevice.current.identifierForVendor?.uuidString ?? "0"])
-        SharedZallDataSDK()?.trackAppInstall(withProperties: ["testKey":"testValue"])
-        SharedZallDataSDK()?.registerDynamicSuperProperties({
+        ZallDataSharedSDK()?.addWebViewUserAgentZallDataFlag();
+        ZallDataSharedSDK()?.enableTrackScreenOrientation(true)
+        ZallDataSharedSDK()?.registerSuperProperties(["AAA":UIDevice.current.identifierForVendor?.uuidString ?? "0"])
+        ZallDataSharedSDK()?.trackAppInstall(withProperties: ["testKey":"testValue"])
+        ZallDataSharedSDK()?.registerDynamicSuperProperties({
             var appState:UIApplication.State?
             if Thread.isMainThread {
                 appState = UIApplication.shared.applicationState;

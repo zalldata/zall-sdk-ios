@@ -47,13 +47,13 @@ Pod::Spec.new do |spec|
   spec.subspec 'Default' do |default|
     default.dependency 'ZallDataSDK/AutoTrack'
     default.dependency 'ZallDataSDK/Channel'
-    default.dependency 'ZallDataSDK/Encrypt'
     default.dependency 'ZallDataSDK/Extension'
   end
   
   # All 加载所有模块
   spec.subspec 'All' do |all|
     all.dependency 'ZallDataSDK/Default'
+    all.dependency 'ZallDataSDK/Encrypt'
     all.dependency 'ZallDataSDK/RemoteConfig'
     all.dependency 'ZallDataSDK/DebugMode'
     all.dependency 'ZallDataSDK/Visualized'

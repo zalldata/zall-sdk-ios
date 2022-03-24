@@ -75,37 +75,37 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"返回预置的属性":^{
-                zaprintf([SharedZallDataSDK() getPresetProperties]);
+                zaprintf([ZallDataSharedSDK() getPresetProperties]);
             }
             
         },
         @{
             @"注册公共属性":^{
                 NSDictionary * dict = @{@"key_first":@"value_first"};
-                [SharedZallDataSDK() registerSuperProperties:dict];
+                [ZallDataSharedSDK() registerSuperProperties:dict];
             }
         },
         @{
             @"动态公共属性":^{
                 __block NSDictionary * dict = @{@"key_dy_first":@"value_dy_first"};
-                [SharedZallDataSDK() registerDynamicSuperProperties:^NSDictionary<NSString *,id> * _Nonnull{
+                [ZallDataSharedSDK() registerDynamicSuperProperties:^NSDictionary<NSString *,id> * _Nonnull{
                     return dict;
                 }];
             }
         },
         @{
             @"注销公共属性":^{
-                [SharedZallDataSDK() unregisterSuperProperty:@"key_first"];
+                [ZallDataSharedSDK() unregisterSuperProperty:@"key_first"];
             }
         },
         @{
             @"清空公共属性":^{
-                [SharedZallDataSDK() clearSuperProperties];
+                [ZallDataSharedSDK() clearSuperProperties];
             }
         },
         @{
             @"获取当前公共属性":^{
-                zaprintf([SharedZallDataSDK() currentSuperProperties]);
+                zaprintf([ZallDataSharedSDK() currentSuperProperties]);
             }
         }
     ];
@@ -116,24 +116,24 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"设置当前用户的 loginId":^{
-                [SharedZallDataSDK() login:@"1234567890"];
+                [ZallDataSharedSDK() login:@"1234567890"];
             }
             
         },
         @{
             @"获取当前用户ID":^{
-                zaprintf([SharedZallDataSDK() loginId]);
+                zaprintf([ZallDataSharedSDK() loginId]);
             }
         },
         @{
             @"当前用户的 loginId 并添加扩招属性":^{
                 NSDictionary * dict = @{@"username":@"666"};
-                [SharedZallDataSDK() login:@"9876543210" withProperties:dict];
+                [ZallDataSharedSDK() login:@"9876543210" withProperties:dict];
             }
         },
         @{
             @"注销，清空当前用户的 loginId":^{
-                [SharedZallDataSDK() logout];
+                [ZallDataSharedSDK() logout];
             }
         },
         
@@ -145,23 +145,23 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"获取用户的唯一用户标识":^{
-                zaprintf([SharedZallDataSDK() distinctId]);
+                zaprintf([ZallDataSharedSDK() distinctId]);
             }
             
         },
         @{
             @"获取匿名 id":^{
-                zaprintf([SharedZallDataSDK() anonymousId]);
+                zaprintf([ZallDataSharedSDK() anonymousId]);
             }
         },
         @{
             @"重置默认匿名 id":^{
-                [SharedZallDataSDK() resetAnonymousId];
+                [ZallDataSharedSDK() resetAnonymousId];
             }
         },
         @{
             @"指定匿名ID":^{
-                [SharedZallDataSDK() identify:@"3333"];
+                [ZallDataSharedSDK() identify:@"3333"];
             }
         },
     ];
@@ -173,12 +173,12 @@ NS_INLINE void zaprintf(id obj){
         
         @{
             @"绑定":^{
-                [SharedZallDataSDK() bind:@"bind_key" value:@"bind_value"];
+                [ZallDataSharedSDK() bind:@"bind_key" value:@"bind_value"];
             }
         },
         @{
             @"解绑":^{
-                [SharedZallDataSDK() unbind:@"bing_key" value:@"bind_value"];
+                [ZallDataSharedSDK() unbind:@"bing_key" value:@"bind_value"];
             }
         }
     ];
@@ -190,13 +190,13 @@ NS_INLINE void zaprintf(id obj){
         
         @{
             @"设置 item":^{
-                [SharedZallDataSDK() itemSetWithType:@"item" itemId:@"1" properties:@{@"name1": @"Item1", @"name2": @"Item2"}];
+                [ZallDataSharedSDK() itemSetWithType:@"item" itemId:@"1" properties:@{@"name1": @"Item1", @"name2": @"Item2"}];
                 
             }
         },
         @{
             @"删除 item":^{
-                [SharedZallDataSDK() itemDeleteWithType:@"item" itemId:@"1"];
+                [ZallDataSharedSDK() itemDeleteWithType:@"item" itemId:@"1"];
             }
         }
     ];
@@ -208,7 +208,7 @@ NS_INLINE void zaprintf(id obj){
         
         @{
             @"设置用户的一个或者几个 Profiles":^{
-                [SharedZallDataSDK() set:@{
+                [ZallDataSharedSDK() set:@{
                     @"Profiles1":@"Profiles1",
                     @"Profiles2":@{
                         @"Profiles2_1":@"Profiles2_1",
@@ -224,17 +224,17 @@ NS_INLINE void zaprintf(id obj){
         },
         @{
             @"设置用户的pushId":^{
-                [SharedZallDataSDK() profilePushKey:@"pushkey1" pushId:@"pushId1"];
+                [ZallDataSharedSDK() profilePushKey:@"pushkey1" pushId:@"pushId1"];
             }
         },
         @{
             @"删除用户设置的 pushId":^{
-                [SharedZallDataSDK() profileUnsetPushKey:@"pushkey1"];
+                [ZallDataSharedSDK() profileUnsetPushKey:@"pushkey1"];
             }
         },
         @{
             @"首次设置用户Profiles":^{
-                [SharedZallDataSDK() setOnce:@{
+                [ZallDataSharedSDK() setOnce:@{
                     @"OnceProfiles1":@"OnceProfiles1",
                     @"OnceProfiles2":@{
                         @"OnceProfiles2_1":@"OnceProfiles2_1",
@@ -249,7 +249,7 @@ NS_INLINE void zaprintf(id obj){
         },
         @{
             @"设置用户的单个 Profile":^{
-                [SharedZallDataSDK() set:@"Profiles1" to:@{
+                [ZallDataSharedSDK() set:@"Profiles1" to:@{
                     @"Profiles1":@"Profiles1",
                     @"Profiles2":@{
                         @"Profiles2_1":@"Profiles2_1",
@@ -265,7 +265,7 @@ NS_INLINE void zaprintf(id obj){
         },
         @{
             @"首次设置用户的单个 Profile 的内容":^{
-                [SharedZallDataSDK() setOnce:@"OnceProfiles1" to:@{
+                [ZallDataSharedSDK() setOnce:@"OnceProfiles1" to:@{
                     @"OnceProfiles1":@"OnceProfiles1",
                     @"OnceProfiles2":@{
                         @"OnceProfiles2_1":@"OnceProfiles2_1",
@@ -281,18 +281,18 @@ NS_INLINE void zaprintf(id obj){
         },
         @{
             @"删除某个 Profile 的全部内容":^{
-                [SharedZallDataSDK() unset:@"Profiles1"];
+                [ZallDataSharedSDK() unset:@"Profiles1"];
                 
             }
         },
         @{
             @"给一个数值类型的 Profile 增加一个数值":^{
-                [SharedZallDataSDK() increment:@"increment" by:@(1)];
+                [ZallDataSharedSDK() increment:@"increment" by:@(1)];
             }
         },
         @{
             @"给多个数值类型的 Profile 增加数值":^{
-                [SharedZallDataSDK() increment:@{
+                [ZallDataSharedSDK() increment:@{
                     @"increment1":@(1),
                     @"increment2":@(1),
                 }];
@@ -300,25 +300,25 @@ NS_INLINE void zaprintf(id obj){
         },
         @{
             @"向一个 NSSet 或者 NSArray 类型的 value 添加一些值":^{
-                [SharedZallDataSDK() append:@"append" by:@[@"append1",@"append2"]];
+                [ZallDataSharedSDK() append:@"append" by:@[@"append1",@"append2"]];
                 
             }
         },
         @{
             @"删除当前这个用户的所有记录":^{
-                [SharedZallDataSDK() deleteUser];
+                [ZallDataSharedSDK() deleteUser];
                 
             }
         },
         @{
             @"清除 keychain 缓存数据":^{
-                [SharedZallDataSDK() clearKeychainData];
+                [ZallDataSharedSDK() clearKeychainData];
                 
             }
         },
         @{
             @" 获取最后设置的属性":^{
-                zaprintf([SharedZallDataSDK() getLastScreenTrackProperties]);
+                zaprintf([ZallDataSharedSDK() getLastScreenTrackProperties]);
                 
             }
         }
@@ -330,39 +330,39 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"开始事件计时":^{
-                zaprintf([SharedZallDataSDK() trackTimerStart:@"time_track01"]);
+                zaprintf([ZallDataSharedSDK() trackTimerStart:@"time_track01"]);
             },
         },
         @{
             @"暂停事件计时":^{
-                [SharedZallDataSDK() trackTimerPause:@"time_track01"];
+                [ZallDataSharedSDK() trackTimerPause:@"time_track01"];
             },
         },
         @{
             @"恢复事件计时":^{
-                [SharedZallDataSDK() trackTimerResume:@"time_track01"];
+                [ZallDataSharedSDK() trackTimerResume:@"time_track01"];
             },
         },
         @{
             @"结束事件计时有参":^{
-                [SharedZallDataSDK() trackTimerEnd:@"time_track01" withProperties:@{
+                [ZallDataSharedSDK() trackTimerEnd:@"time_track01" withProperties:@{
                     @"time_end":@"time_end"
                 }];
             },
         },
         @{
             @"结束事件计时":^{
-                [SharedZallDataSDK() trackTimerEnd:@"time_track01"];
+                [ZallDataSharedSDK() trackTimerEnd:@"time_track01"];
             },
         },
         @{
             @"删除事件计时":^{
-                [SharedZallDataSDK() trackRemoveTimer:@"time_track01"];
+                [ZallDataSharedSDK() trackRemoveTimer:@"time_track01"];
             },
         },
         @{
             @"清除所有事件计时器":^{
-                [SharedZallDataSDK() clearTrackTimer];
+                [ZallDataSharedSDK() clearTrackTimer];
             },
         },
     ];
@@ -373,14 +373,14 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"Track App Extension groupIdentifier 中缓存的数据":^{
-                [SharedZallDataSDK() trackEventFromExtensionWithGroupIdentifier:@"34" completion:^(NSString * _Nonnull groupIdentifier, NSArray * _Nonnull events) {
+                [ZallDataSharedSDK() trackEventFromExtensionWithGroupIdentifier:@"34" completion:^(NSString * _Nonnull groupIdentifier, NSArray * _Nonnull events) {
                     zaprintf(events);
                 }];
             },
         },
         @{
             @"修改入库之前的事件属性":^{
-                [SharedZallDataSDK() trackEventWillSave:^BOOL(NSString * _Nonnull eventName, NSMutableDictionary<NSString *,id> * _Nonnull properties) {
+                [ZallDataSharedSDK() trackEventWillSave:^BOOL(NSString * _Nonnull eventName, NSMutableDictionary<NSString *,id> * _Nonnull properties) {
                     zaprintf(properties);
                     return YES;
                 }];
@@ -388,24 +388,24 @@ NS_INLINE void zaprintf(id obj){
         },
         @{
             @"调用 track":^{
-                [SharedZallDataSDK() track:@"event_01"];
+                [ZallDataSharedSDK() track:@"event_01"];
             },
         },
         @{
             @"调用 track 有属性":^{
-                [SharedZallDataSDK() track:@"event_01" withProperties:@{
+                [ZallDataSharedSDK() track:@"event_01" withProperties:@{
                     @"time_end":@"time_end"
                 }];
             },
         },
         @{
             @"强制上传埋点事件":^{
-                [SharedZallDataSDK() trackForceSendAll];
+                [ZallDataSharedSDK() trackForceSendAll];
             },
         },
         @{
             @"删除本地所有缓存事件":^{
-                [SharedZallDataSDK() trackDeleteAll];
+                [ZallDataSharedSDK() trackDeleteAll];
             },
         }
     ];
@@ -416,29 +416,29 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"是否开启 AutoTrack":^{
-                zaprintf(@([SharedZallDataSDK() isAutoTrackEnabled]));
+                zaprintf(@([ZallDataSharedSDK() isAutoTrackEnabled]));
             },
         },
         @{
             @"通过代码触发 UIView 的 $AppClick 事件":^{
-                [SharedZallDataSDK() trackViewAppClick:rootViewController().view];
+                [ZallDataSharedSDK() trackViewAppClick:rootViewController().view];
             },
         },
         @{
             @"通过代码触发  $AppViewScreen":^{
-                [SharedZallDataSDK() trackViewScreen:rootViewController()];
+                [ZallDataSharedSDK() trackViewScreen:rootViewController()];
             },
         },
         @{
             @"通过代码触发  $AppViewScreen properties":^{
-                [SharedZallDataSDK() trackViewScreen:rootViewController() properties:@{
+                [ZallDataSharedSDK() trackViewScreen:rootViewController() properties:@{
                     @"properties":@"properties"
                 }];
             },
         },
         @{
             @"通过代码触发  $AppViewScreen 通过url":^{
-                [SharedZallDataSDK() trackViewScreen:@"url" withProperties:@{@"properties":@"properties"}];
+                [ZallDataSharedSDK() trackViewScreen:@"url" withProperties:@{@"properties":@"properties"}];
             },
         }
     ];
@@ -449,12 +449,12 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"track 渠道":^{
-                [SharedZallDataSDK() trackChannelEvent:@"channel1"];
+                [ZallDataSharedSDK() trackChannelEvent:@"channel1"];
             },
         },
         @{
             @"track 渠道 加参":^{
-                [SharedZallDataSDK() trackChannelEvent:@"channel2" properties:@{
+                [ZallDataSharedSDK() trackChannelEvent:@"channel2" properties:@{
                     @"channel2_properties":@"channel2_properties"
                 }];
             },
@@ -462,38 +462,38 @@ NS_INLINE void zaprintf(id obj){
         @{
             @" App 首次启动时追踪渠道来源":^{
 
-                [SharedZallDataSDK() trackAppInstall];
+                [ZallDataSharedSDK() trackAppInstall];
             },
         },
         @{
             @"App 首次启动时追踪渠道来源 填入事件属性 $utm_ 开头的一系列属性中":^{
-                [SharedZallDataSDK() trackAppInstallWithProperties:@{
+                [ZallDataSharedSDK() trackAppInstallWithProperties:@{
                     @"properties":@"properties"
                 }];
             },
         },
         @{
             @"App 首次启动时追踪渠道来源 ":^{
-                [SharedZallDataSDK() trackAppInstallWithProperties:@{
+                [ZallDataSharedSDK() trackAppInstallWithProperties:@{
                     @"properties":@"properties"
                 } disableCallback:YES];
             },
         },
         @{
             @"App 首次启动时追踪渠道来源 自定义事件":^{
-                [SharedZallDataSDK() trackInstallation:@"aaa"];
+                [ZallDataSharedSDK() trackInstallation:@"aaa"];
             },
         },
         @{
             @"App 首次启动时追踪渠道来源 自定义事件 自定义属性":^{
-                [SharedZallDataSDK() trackInstallation:@"aaa" withProperties:@{
+                [ZallDataSharedSDK() trackInstallation:@"aaa" withProperties:@{
                     @"properties":@"properties"
                 }];
             },
         },
         @{
             @"App 首次启动时追踪渠道来源 自定义事件 自定义属性":^{
-                [SharedZallDataSDK() trackInstallation:@"aaa" withProperties:@{
+                [ZallDataSharedSDK() trackInstallation:@"aaa" withProperties:@{
                     @"properties":@"properties"
                 } disableCallback:YES];
             },
@@ -506,7 +506,7 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"设置是否显示 debugInfoView":^{
-                [SharedZallDataSDK() showDebugInfoView:YES];
+                [ZallDataSharedSDK() showDebugInfoView:YES];
 
             }
         }
@@ -518,7 +518,7 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"DeepLink 回调函数":^{
-                [SharedZallDataSDK() setDeeplinkCallback:^(NSString * _Nullable params, BOOL success, NSInteger appAwakePassedTime) {
+                [ZallDataSharedSDK() setDeeplinkCallback:^(NSString * _Nullable params, BOOL success, NSInteger appAwakePassedTime) {
                     zaprintf(params);
                     zaprintf(@(appAwakePassedTime));
                 }];
@@ -526,7 +526,7 @@ NS_INLINE void zaprintf(id obj){
         },
         @{
             @"触发 $AppDeepLinkLaunch 事件":^{
-                [SharedZallDataSDK() trackDeepLinkLaunchWithURL:@"AppDeepLinkLaunch666"];
+                [ZallDataSharedSDK() trackDeepLinkLaunchWithURL:@"AppDeepLinkLaunch666"];
             }
         }
     ];
@@ -537,7 +537,7 @@ NS_INLINE void zaprintf(id obj){
     return @[
         @{
             @"设备方向 开关":^{
-                [SharedZallDataSDK() enableTrackScreenOrientation:YES];
+                [ZallDataSharedSDK() enableTrackScreenOrientation:YES];
             }
         }
     ];
@@ -554,47 +554,47 @@ NS_INLINE void zaprintf(id obj){
         },
         @{
             @"H5 数据打通的时候默认通过 ServerUrl 校验":^{
-                [SharedZallDataSDK() addWebViewUserAgentZallDataFlag];
+                [ZallDataSharedSDK() addWebViewUserAgentZallDataFlag];
             }
         },
         @{
             @"H5 数据打通的时候是否校验":^{
-                [SharedZallDataSDK() addWebViewUserAgentZallDataFlag:YES];
+                [ZallDataSharedSDK() addWebViewUserAgentZallDataFlag:YES];
             }
         },
         @{
             @"H5 数据打通的时候是否校验":^{
-                [SharedZallDataSDK() addWebViewUserAgentZallDataFlag:YES userAgent:@""];
+                [ZallDataSharedSDK() addWebViewUserAgentZallDataFlag:YES userAgent:@""];
             }
         },
         @{
             @"将 distinctId 传递给当前的 WebView":^{
 
-                [SharedZallDataSDK() showUpWebView:nil WithRequest:nil];
+                [ZallDataSharedSDK() showUpWebView:nil WithRequest:nil];
             }
         },
         @{
             @"将 distinctId 传递给当前的 WebView 验证":^{
 
-                [SharedZallDataSDK() showUpWebView:nil WithRequest:nil enableVerify:YES];
+                [ZallDataSharedSDK() showUpWebView:nil WithRequest:nil enableVerify:YES];
             }
         },
         @{
             @"将 distinctId 传递给当前的 WebView 扩展属性":^{
 
-                [SharedZallDataSDK() showUpWebView:nil WithRequest:nil andProperties:@{}];
+                [ZallDataSharedSDK() showUpWebView:nil WithRequest:nil andProperties:@{}];
             }
         },
         @{
             @"桥接h5事件上传":^{
 
-                [SharedZallDataSDK() trackFromH5WithEvent:@"trackFromH5WithEvent"];
+                [ZallDataSharedSDK() trackFromH5WithEvent:@"trackFromH5WithEvent"];
             }
         },
         @{
             @"桥接h5事件上传 验证":^{
 
-                [SharedZallDataSDK() trackFromH5WithEvent:@"trackFromH5WithEvent" enableVerify:YES];
+                [ZallDataSharedSDK() trackFromH5WithEvent:@"trackFromH5WithEvent" enableVerify:YES];
             }
         },
 
@@ -605,7 +605,7 @@ NS_INLINE void zaprintf(id obj){
 +(NSArray*)location{
     return @[
         @{@"位置信息采集开关":^{
-            [SharedZallDataSDK() enableTrackGPSLocation:YES];
+            [ZallDataSharedSDK() enableTrackGPSLocation:YES];
         }}
     ];
 }
@@ -626,13 +626,13 @@ NS_INLINE void zaprintf(id obj){
 +(NSArray*)visualized{
     return @[
         @{@"是否开启":^{
-            [SharedZallDataSDK() isVisualizedAutoTrackEnabled];
+            [ZallDataSharedSDK() isVisualizedAutoTrackEnabled];
         }},
         @{@"指定哪些页面开启 可视化全埋点 分析":^{
-            [SharedZallDataSDK() addVisualizedAutoTrackViewControllers:@[NSStringFromClass(rootViewController().class)]];
+            [ZallDataSharedSDK() addVisualizedAutoTrackViewControllers:@[NSStringFromClass(rootViewController().class)]];
         }},
         @{@"某个页面是否开启 可视化全埋点 分析":^{
-            zaprintf(@([SharedZallDataSDK() isVisualizedAutoTrackViewController:rootViewController()]));
+            zaprintf(@([ZallDataSharedSDK() isVisualizedAutoTrackViewController:rootViewController()]));
         }}
     ];
 }
@@ -640,13 +640,13 @@ NS_INLINE void zaprintf(id obj){
 +(NSArray*)heatMap{
     return @[
         @{@"是否开启":^{
-            zaprintf(@([SharedZallDataSDK() isHeatMapEnabled]));
+            zaprintf(@([ZallDataSharedSDK() isHeatMapEnabled]));
         }},
         @{@"指定哪些页面开启 HeatMap 分析":^{
-            [SharedZallDataSDK() addHeatMapViewControllers:@[NSStringFromClass(rootViewController().class)]];
+            [ZallDataSharedSDK() addHeatMapViewControllers:@[NSStringFromClass(rootViewController().class)]];
         }},
         @{@"某个页面是否开启 点击图 分析":^{
-            zaprintf(@([SharedZallDataSDK() isHeatMapViewController:rootViewController()]));
+            zaprintf(@([ZallDataSharedSDK() isHeatMapViewController:rootViewController()]));
         }}
     ];
 }

@@ -52,11 +52,11 @@ static NSString* Za_Default_ServerURL = @"http://172.16.90.61:58080/a?service=za
     options.enableAutoAddChannelCallbackEvent = YES;
     [ZallDataSDK completeConfigOption:options];
     
-    [SharedZallDataSDK() addWebViewUserAgentZallDataFlag];
-    [SharedZallDataSDK() enableTrackScreenOrientation:YES];
-    [SharedZallDataSDK() registerSuperProperties:@{@"AAA":UIDevice.currentDevice.identifierForVendor.UUIDString}];
-    [SharedZallDataSDK() trackAppInstallWithProperties:@{@"testValue" : @"testKey"}];
-    [SharedZallDataSDK() registerDynamicSuperProperties:^NSDictionary * _Nonnull{
+    [ZallDataSharedSDK() addWebViewUserAgentZallDataFlag];
+    [ZallDataSharedSDK() enableTrackScreenOrientation:YES];
+    [ZallDataSharedSDK() registerSuperProperties:@{@"AAA":UIDevice.currentDevice.identifierForVendor.UUIDString}];
+    [ZallDataSharedSDK() trackAppInstallWithProperties:@{@"testValue" : @"testKey"}];
+    [ZallDataSharedSDK() registerDynamicSuperProperties:^NSDictionary * _Nonnull{
       __block UIApplicationState appState;
       if (NSThread.isMainThread) {
           appState = UIApplication.sharedApplication.applicationState;

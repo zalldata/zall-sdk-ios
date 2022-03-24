@@ -111,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 /// 单例实例对象
-NS_INLINE ZallDataSDK* _Nullable SharedZallDataSDK(void){
+NS_INLINE ZallDataSDK* _Nullable ZallDataSharedSDK(void){
     return [ZallDataSDK sharedInstance];
 }
 

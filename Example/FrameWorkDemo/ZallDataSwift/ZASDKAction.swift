@@ -87,24 +87,24 @@ extension ZASDKAction{
     class func publicAttribute()->Array<Any>{
         return  [
             ["返回预制的属性":self.actionBlock {
-                print(SharedZallDataSDK()?.getPresetProperties() as Any)
+                print(ZallDataSharedSDK()?.getPresetProperties() as Any)
             }],
             ["注册公共属性": self.actionBlock{
-                SharedZallDataSDK()?.registerSuperProperties(["key_first":"value_first"])
+                ZallDataSharedSDK()?.registerSuperProperties(["key_first":"value_first"])
             }],
             ["动态公共属性": self.actionBlock{
-                SharedZallDataSDK()?.registerDynamicSuperProperties({
+                ZallDataSharedSDK()?.registerDynamicSuperProperties({
                     ["key_dy_first":"value_dy_first"]
                 })
             }],
             ["注销公共属性": self.actionBlock{
-                SharedZallDataSDK()?.unregisterSuperProperty("key_first")
+                ZallDataSharedSDK()?.unregisterSuperProperty("key_first")
             }],
             ["清空公共属性": self.actionBlock{
-                SharedZallDataSDK()?.clearSuperProperties()
+                ZallDataSharedSDK()?.clearSuperProperties()
             }],
             ["获取当前公共属性": self.actionBlock{
-                print(SharedZallDataSDK()?.currentSuperProperties() as Any);
+                print(ZallDataSharedSDK()?.currentSuperProperties() as Any);
             }]
         ]
     }
@@ -112,34 +112,34 @@ extension ZASDKAction{
     class func loginId()->Array<Any>{
         return  [
             ["设置当前用户的 loginId":self.actionBlock{
-                SharedZallDataSDK()?.login("1234567890")
+                ZallDataSharedSDK()?.login("1234567890")
                 
             }],
             ["获取当前用户ID":self.actionBlock{
-                print(SharedZallDataSDK()?.loginId() as Any)
+                print(ZallDataSharedSDK()?.loginId() as Any)
             }],
             ["当前用户的 loginId 并添加扩招属性":self.actionBlock{
-                SharedZallDataSDK()?.login("987654321", withProperties: ["username":"555"])
+                ZallDataSharedSDK()?.login("987654321", withProperties: ["username":"555"])
             }],
             ["注销，清空当前用户的 loginId":self.actionBlock{
-                SharedZallDataSDK()?.logout()
+                ZallDataSharedSDK()?.logout()
             }],
         ]
     }
     class func anonymousID()->Array<Any>{
         return [
             ["获取用户的唯一用户标识":self.actionBlock{
-                print(SharedZallDataSDK()?.distinctId() as Any)
+                print(ZallDataSharedSDK()?.distinctId() as Any)
             }],
             ["获取匿名 id":self.actionBlock{
-                print(SharedZallDataSDK()?.anonymousId() as Any)
+                print(ZallDataSharedSDK()?.anonymousId() as Any)
             }],
             ["重置默认匿名 id":self.actionBlock{
-                SharedZallDataSDK()?.resetAnonymousId()
+                ZallDataSharedSDK()?.resetAnonymousId()
                     
             }],
             ["指定匿名ID":self.actionBlock{
-                SharedZallDataSDK()?.identify("123123")
+                ZallDataSharedSDK()?.identify("123123")
             }]
         ]
     }
@@ -147,10 +147,10 @@ extension ZASDKAction{
     class func bind()->Array<Any>{
         return [
             ["绑定":self.actionBlock{
-                SharedZallDataSDK()?.bind("bind_key", value: "bind_value")
+                ZallDataSharedSDK()?.bind("bind_key", value: "bind_value")
             }],
             ["解绑":self.actionBlock{
-                SharedZallDataSDK()?.bind("bing_key", value: "bind_value")
+                ZallDataSharedSDK()?.bind("bing_key", value: "bind_value")
             }]
             
         ]
@@ -158,11 +158,11 @@ extension ZASDKAction{
     class func item()->Array<Any>{
         return [
             ["设置 item":self.actionBlock{
-                SharedZallDataSDK()?.itemSet(withType: "itme", itemId: "1", properties: ["name1":"Item1","name2":"Item2"])
+                ZallDataSharedSDK()?.itemSet(withType: "itme", itemId: "1", properties: ["name1":"Item1","name2":"Item2"])
                 
             }],
             ["删除 item":self.actionBlock{
-                SharedZallDataSDK()?.itemDelete(withType: "item", itemId: "1")
+                ZallDataSharedSDK()?.itemDelete(withType: "item", itemId: "1")
                 
             }]
         ]
@@ -170,7 +170,7 @@ extension ZASDKAction{
     class func userProfile()->Array<Any>{
         return [
             ["设置用户的一个或者几个 Profiles":self.actionBlock{
-                SharedZallDataSDK()?.set([
+                ZallDataSharedSDK()?.set([
                     "Profiles1":"Profiles1",
                     "Profiles2":[
                         "Profiles2_1":"Profiles2_1"
@@ -179,13 +179,13 @@ extension ZASDKAction{
                 
             }],
             ["设置用户的pushId":self.actionBlock{
-                SharedZallDataSDK()?.profilePushKey("pushkey1", pushId: "pushId1")
+                ZallDataSharedSDK()?.profilePushKey("pushkey1", pushId: "pushId1")
             }],
             ["删除用户设置的 pushId":self.actionBlock{
-                SharedZallDataSDK()?.profileUnsetPushKey("pushId1")
+                ZallDataSharedSDK()?.profileUnsetPushKey("pushId1")
             }],
             ["首次设置用户Profiles":self.actionBlock{
-                SharedZallDataSDK()?.setOnce([
+                ZallDataSharedSDK()?.setOnce([
                     "Profiles1":"Profiles1",
                     "Profiles2":[
                         "Profiles2_1":"Profiles2_1"
@@ -193,7 +193,7 @@ extension ZASDKAction{
                 ])
             }],
             ["设置用户的单个 Profile":self.actionBlock{
-                SharedZallDataSDK()?.set("Profiles1", to: [
+                ZallDataSharedSDK()?.set("Profiles1", to: [
                     "Profiles1":"Profiles1",
                     "Profiles2":[
                         "Profiles2_1":"Profiles2_1"
@@ -201,7 +201,7 @@ extension ZASDKAction{
                 ])
             }],
             ["首次设置用户的单个 Profile 的内容":self.actionBlock{
-                SharedZallDataSDK()?.setOnce("OnceProfiles1", to: [
+                ZallDataSharedSDK()?.setOnce("OnceProfiles1", to: [
                     "Profiles1":"Profiles1",
                     "Profiles2":[
                         "Profiles2_1":"Profiles2_1"
@@ -209,33 +209,33 @@ extension ZASDKAction{
                 ])
             }],
             ["删除某个 Profile 的全部内容":self.actionBlock{
-                SharedZallDataSDK()?.unset("Profiles1")
+                ZallDataSharedSDK()?.unset("Profiles1")
             }],
             ["给一个数值类型的 Profile 增加一个数值":self.actionBlock{
-                SharedZallDataSDK()?.increment("increment", by: 1)
+                ZallDataSharedSDK()?.increment("increment", by: 1)
             }],
             
             ["给多个数值类型的 Profile 增加数值":self.actionBlock{
-                SharedZallDataSDK()?.increment([
+                ZallDataSharedSDK()?.increment([
                     "increment1":1,
                     "increment2":2])
             }],
             ["向一个 NSSet 或者 NSArray 类型的 value 添加值":self.actionBlock{
                 let ser:NSArray = ["append1","append2"]
-                SharedZallDataSDK()?.append("append", by:ser)
+                ZallDataSharedSDK()?.append("append", by:ser)
             }],
             ["删除当前这个用户的所有记录":self.actionBlock{
-                SharedZallDataSDK()?.deleteUser()
+                ZallDataSharedSDK()?.deleteUser()
             }],
             
             
             
             ["清除 keychain 缓存数据":self.actionBlock{
-                SharedZallDataSDK()?.clearKeychainData()
+                ZallDataSharedSDK()?.clearKeychainData()
             }],
 
             ["获取最后设置的属性":self.actionBlock{
-                print(SharedZallDataSDK()?.getLastScreenTrackProperties() as Any)
+                print(ZallDataSharedSDK()?.getLastScreenTrackProperties() as Any)
             }]
             
         ]
@@ -243,102 +243,102 @@ extension ZASDKAction{
     class func trackTimer()->Array<Any>{
         return [
             ["开始事件计时":self.actionBlock{
-                print(SharedZallDataSDK()?.trackTimerStart("time_track_01") as Any)
+                print(ZallDataSharedSDK()?.trackTimerStart("time_track_01") as Any)
                 
             }],
             ["暂停事件计时":self.actionBlock{
-                SharedZallDataSDK()?.trackTimerPause("time_track_01")
+                ZallDataSharedSDK()?.trackTimerPause("time_track_01")
                 
             }],
             ["恢复事件计时":self.actionBlock{
-                SharedZallDataSDK()?.trackTimerResume("time_track_01")
+                ZallDataSharedSDK()?.trackTimerResume("time_track_01")
             }],
             ["结束事件计时有参":self.actionBlock{
-                SharedZallDataSDK()?.trackTimerEnd("time_track_01", withProperties: ["time_end":"time_end"])
+                ZallDataSharedSDK()?.trackTimerEnd("time_track_01", withProperties: ["time_end":"time_end"])
             }],
             ["结束事件计时":self.actionBlock{
-                SharedZallDataSDK()?.trackTimerEnd("time_track_01")
+                ZallDataSharedSDK()?.trackTimerEnd("time_track_01")
             }],
             ["删除事件计时":self.actionBlock{
-                SharedZallDataSDK()?.trackRemoveTimer("time_track_01")
+                ZallDataSharedSDK()?.trackRemoveTimer("time_track_01")
             }],
             ["清除所有事件计时器":self.actionBlock{
-                SharedZallDataSDK()?.clearTrackTimer()
+                ZallDataSharedSDK()?.clearTrackTimer()
             }]
         ]
     }
     class func trackEvent()->Array<Any>{
         return [
             ["Track App Extension groupIdentifier 中缓存的数据":self.actionBlock{
-                SharedZallDataSDK()?.trackEventFromExtension(withGroupIdentifier: "11", completion: { groupIdentifier, events in
+                ZallDataSharedSDK()?.trackEventFromExtension(withGroupIdentifier: "11", completion: { groupIdentifier, events in
                     print(groupIdentifier)
                     print(events)
                 })
             }],
             ["修改入库之前的事件属性":self.actionBlock{
-                SharedZallDataSDK()?.trackEventWillSave({ eventName, properties in
+                ZallDataSharedSDK()?.trackEventWillSave({ eventName, properties in
                     print(properties)
                     return true
                 })
             }],
             ["调用 track":self.actionBlock{
-                SharedZallDataSDK()?.track("event_01")
+                ZallDataSharedSDK()?.track("event_01")
             }],
             ["调用 track 有属性":self.actionBlock{
-                SharedZallDataSDK()?.track("event_01", withProperties: ["time_end":"time_end"])
+                ZallDataSharedSDK()?.track("event_01", withProperties: ["time_end":"time_end"])
             }],
             ["强制上传埋点事件":self.actionBlock{
-                SharedZallDataSDK()?.trackForceSendAll()
+                ZallDataSharedSDK()?.trackForceSendAll()
             }],
             ["删除本地所有缓存事件":self.actionBlock{
-                SharedZallDataSDK()?.trackDeleteAll()
+                ZallDataSharedSDK()?.trackDeleteAll()
             }]
         ]
     }
     class func trackView()->Array<Any>{
         return [
             ["是否开启 AutoTrack":self.actionBlock{
-                print(SharedZallDataSDK()?.isAutoTrackEnabled() as Any)
+                print(ZallDataSharedSDK()?.isAutoTrackEnabled() as Any)
             }],
             ["通过代码触发 UIView 的 $AppClick 事件":self.actionBlock{
-                SharedZallDataSDK()?.trackViewAppClick(rootViewController().view)
+                ZallDataSharedSDK()?.trackViewAppClick(rootViewController().view)
             }],
             ["通过代码触发  $AppViewScreen":self.actionBlock{
-                SharedZallDataSDK()?.trackViewScreen(rootViewController())
+                ZallDataSharedSDK()?.trackViewScreen(rootViewController())
             }],
             ["通过代码触发  $AppViewScreen properties":self.actionBlock{
-                SharedZallDataSDK()?.trackViewScreen(rootViewController(), properties: ["propertiestrackViewScreen":"propertiestrackViewScreen"])
+                ZallDataSharedSDK()?.trackViewScreen(rootViewController(), properties: ["propertiestrackViewScreen":"propertiestrackViewScreen"])
             }],
             ["通过代码触发  $AppViewScreen 通过url":self.actionBlock{
-                SharedZallDataSDK()?.trackViewScreen("url", withProperties: ["AppViewScreen":"AppViewScreen"])
+                ZallDataSharedSDK()?.trackViewScreen("url", withProperties: ["AppViewScreen":"AppViewScreen"])
             }]
         ]
     }
     class func trackChannel()->Array<Any>{
         return [
             ["track 渠道":self.actionBlock{
-                SharedZallDataSDK()?.trackChannelEvent("channel1")
+                ZallDataSharedSDK()?.trackChannelEvent("channel1")
             }],
             ["track 渠道 加参":self.actionBlock{
-                SharedZallDataSDK()?.trackChannelEvent("channel2", properties: ["channel2":"channel2"])
+                ZallDataSharedSDK()?.trackChannelEvent("channel2", properties: ["channel2":"channel2"])
             }],
             ["App 首次启动时追踪渠道来源":self.actionBlock{
-                SharedZallDataSDK()?.trackAppInstall()
+                ZallDataSharedSDK()?.trackAppInstall()
             }],
             ["App 首次启动时追踪渠道来源 填入事件属性 $utm_ 开头的一系列属性中":self.actionBlock{
-                SharedZallDataSDK()?.trackAppInstall(withProperties: ["appinstall":"appinstall"])
+                ZallDataSharedSDK()?.trackAppInstall(withProperties: ["appinstall":"appinstall"])
             }],
             ["App 首次启动时追踪渠道来源 ":self.actionBlock{
-                SharedZallDataSDK()?.trackAppInstall(withProperties: ["properties":"properties"], disableCallback:true)
+                ZallDataSharedSDK()?.trackAppInstall(withProperties: ["properties":"properties"], disableCallback:true)
             }],
             ["App 首次启动时追踪渠道来源 自定义事件":self.actionBlock{
-                SharedZallDataSDK()?.trackInstallation("aaa")
+                ZallDataSharedSDK()?.trackInstallation("aaa")
             }],
             ["App 首次启动时追踪渠道来源 自定义属性 ":self.actionBlock{
-                SharedZallDataSDK()?.trackInstallation("aaa", withProperties: ["pro":"pro"])
+                ZallDataSharedSDK()?.trackInstallation("aaa", withProperties: ["pro":"pro"])
             }],
             ["App 首次启动时追踪渠道来源 自定义属性":self.actionBlock{
-                SharedZallDataSDK()?.trackInstallation("aaa", withProperties: ["properties":"properties"], disableCallback: true)
+                ZallDataSharedSDK()?.trackInstallation("aaa", withProperties: ["properties":"properties"], disableCallback: true)
             }]
         ]
     }
@@ -346,7 +346,7 @@ extension ZASDKAction{
     class func debugMode()->Array<Any>{
         return [
             ["设置是否显示 debugInfoView":self.actionBlock{
-                SharedZallDataSDK()?.showDebugInfoView(true)
+                ZallDataSharedSDK()?.showDebugInfoView(true)
             }]
         ]
     }
@@ -354,21 +354,21 @@ extension ZASDKAction{
     class func deeplink()->Array<Any>{
         return [
             ["DeepLink 回调函数":self.actionBlock{
-                SharedZallDataSDK()?.setDeeplinkCallback({ params, success, appAwake in
+                ZallDataSharedSDK()?.setDeeplinkCallback({ params, success, appAwake in
                     print(params as Any)
                     print(success as Any)
                     print(appAwake as Any)
                 })
             }],
             ["触发 $AppDeepLinkLaunch 事件":self.actionBlock{
-                SharedZallDataSDK()?.trackDeepLinkLaunch(withURL: "appdelinkLaunch")
+                ZallDataSharedSDK()?.trackDeepLinkLaunch(withURL: "appdelinkLaunch")
             }]
         ]
     }
     class func screenOrientation()->Array<Any>{
         return [
             ["设备方向 开关":self.actionBlock{
-                SharedZallDataSDK()?.enableTrackScreenOrientation(true)
+                ZallDataSharedSDK()?.enableTrackScreenOrientation(true)
             }]
         ]
     }
@@ -378,29 +378,29 @@ extension ZASDKAction{
                 getCurrentViewController()?.navigationController?.pushViewController(ZAWebViewController(), animated: true)
             }],
             ["H5 数据打通的时候默认通过 ServerUrl 校验":self.actionBlock{
-                SharedZallDataSDK()?.addWebViewUserAgentZallDataFlag()
+                ZallDataSharedSDK()?.addWebViewUserAgentZallDataFlag()
             }],
             ["H5 数据打通的时候是否校验":self.actionBlock{
-                SharedZallDataSDK()?.addWebViewUserAgentZallDataFlag(true)
+                ZallDataSharedSDK()?.addWebViewUserAgentZallDataFlag(true)
             }],
             ["H5 数据打通的时候是否校验UserAgent":self.actionBlock{
-                SharedZallDataSDK()?.addWebViewUserAgentZallDataFlag(true, userAgent: "")
+                ZallDataSharedSDK()?.addWebViewUserAgentZallDataFlag(true, userAgent: "")
             }],
             ["将 distinctId 传递给当前的 WebView":self.actionBlock{
-                SharedZallDataSDK()?.showUpWebView(WKWebView(), with: NSURLRequest() as URLRequest)
+                ZallDataSharedSDK()?.showUpWebView(WKWebView(), with: NSURLRequest() as URLRequest)
             }],
             ["将 distinctId 传递给当前的 WebView 验证":self.actionBlock{
-                SharedZallDataSDK()?.showUpWebView(WKWebView(), with: NSURLRequest() as URLRequest,enableVerify: true)
+                ZallDataSharedSDK()?.showUpWebView(WKWebView(), with: NSURLRequest() as URLRequest,enableVerify: true)
             }],
             ["将 distinctId 传递给当前的 WebView 扩展属性":self.actionBlock{
-                SharedZallDataSDK()?.showUpWebView(WKWebView(), with: NSURLRequest() as URLRequest,andProperties: ["properties":"prooerties"])
+                ZallDataSharedSDK()?.showUpWebView(WKWebView(), with: NSURLRequest() as URLRequest,andProperties: ["properties":"prooerties"])
             }],
             ["桥接h5事件上传":self.actionBlock{
-                SharedZallDataSDK()?.trackFromH5(withEvent: "trackFromH5WithEvent")
+                ZallDataSharedSDK()?.trackFromH5(withEvent: "trackFromH5WithEvent")
             }],
             ["桥接h5事件上传 验证":self.actionBlock{
-                SharedZallDataSDK()?.trackFromH5(withEvent: "trackFromH5WithEvent")
-                SharedZallDataSDK()?.trackFromH5(withEvent: "trackFromH5WithEvent", enableVerify: true)
+                ZallDataSharedSDK()?.trackFromH5(withEvent: "trackFromH5WithEvent")
+                ZallDataSharedSDK()?.trackFromH5(withEvent: "trackFromH5WithEvent", enableVerify: true)
             }]
             
             
@@ -410,7 +410,7 @@ extension ZASDKAction{
     class func location()->Array<Any>{
         return [
             ["位置信息采集开关":self.actionBlock{
-                SharedZallDataSDK()?.enableTrackGPSLocation(true)
+                ZallDataSharedSDK()?.enableTrackGPSLocation(true)
             }]
         ]
     }
@@ -429,13 +429,13 @@ extension ZASDKAction{
     class func visualized()->Array<Any>{
         return [
             ["是否开启":self.actionBlock{
-                print(SharedZallDataSDK()?.isVisualizedAutoTrackEnabled() as Any)
+                print(ZallDataSharedSDK()?.isVisualizedAutoTrackEnabled() as Any)
             }],
             ["指定哪些页面开启 可视化全埋点 分析":self.actionBlock{
-                SharedZallDataSDK()?.addVisualizedAutoTrackViewControllers(["classname"])
+                ZallDataSharedSDK()?.addVisualizedAutoTrackViewControllers(["classname"])
             }],
             ["指定哪些页面开启 可视化全埋点 分析":self.actionBlock{
-                SharedZallDataSDK()?.isVisualizedAutoTrackViewController(rootViewController())
+                ZallDataSharedSDK()?.isVisualizedAutoTrackViewController(rootViewController())
             }]
         ]
     }
@@ -443,13 +443,13 @@ extension ZASDKAction{
     class func heatMap()->Array<Any>{
         return [
             ["是否开启":self.actionBlock{
-                print(SharedZallDataSDK()?.isVisualizedAutoTrackEnabled() as Any)
+                print(ZallDataSharedSDK()?.isVisualizedAutoTrackEnabled() as Any)
             }],
             ["指定哪些页面开启 HeatMap分析":self.actionBlock{
-                SharedZallDataSDK()?.addHeatMapViewControllers(["classname"])
+                ZallDataSharedSDK()?.addHeatMapViewControllers(["classname"])
             }],
             ["某个页面是否开启 点击图  分析":self.actionBlock{
-                SharedZallDataSDK()?.isHeatMapViewController(rootViewController())
+                ZallDataSharedSDK()?.isHeatMapViewController(rootViewController())
             }]
         ]
     }
