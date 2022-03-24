@@ -151,7 +151,7 @@
 
 #pragma mark - ZAModuleChannelMatchProtocol
 - (NSDictionary *)channelInfoWithEvent:(NSString *)event{
-    __block NSMutableDictionary * channelInfo = @[].mutableCopy;
+    __block NSMutableDictionary * channelInfo = @{}.mutableCopy;
     [self getModulesWith:@protocol(ZAModuleChannelMatchProtocol) withInstance:@[NSStringFromSelector(_cmd)] withSuccsss:^BOOL(id module) {
         NSDictionary * dict =[module channelInfoWithEvent:event];
         if (!za_check_empty_dict(dict)) {

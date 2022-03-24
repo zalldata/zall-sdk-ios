@@ -626,14 +626,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = ZallData/ZallData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				DEVELOPMENT_TEAM = LQ9TU47A6P;
 				INFOPLIST_FILE = "$(SRCROOT)/ZallData/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldigital.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -646,14 +646,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = ZallData/ZallData.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				DEVELOPMENT_TEAM = LQ9TU47A6P;
 				INFOPLIST_FILE = "$(SRCROOT)/ZallData/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldigital.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -714,7 +714,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ZallDataExtention/ZallDataExtention.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				DEVELOPMENT_TEAM = LQ9TU47A6P;
 				INFOPLIST_FILE = ZallDataExtention/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -722,7 +722,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData.share;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldigital.sdk.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -734,7 +734,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ZallDataExtention/ZallDataExtention.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZ58C3ZU5P;
+				DEVELOPMENT_TEAM = LQ9TU47A6P;
 				INFOPLIST_FILE = ZallDataExtention/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -742,7 +742,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldata.ZallData.share;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zalldigital.sdk.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
