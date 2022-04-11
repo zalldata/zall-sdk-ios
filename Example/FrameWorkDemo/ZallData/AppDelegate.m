@@ -20,6 +20,10 @@
 
 #import "AppDelegate.h"
 #import <ZallDataSDK/ZallDataSDK.h>
+#import <objc/runtime.h>
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+#import <AdSupport/AdSupport.h>
+
 //#import <ZallDataSDKExtension/ZallDataSDKExtension.h>
 
 static NSString* Za_Default_ServerURL = @"http://172.16.90.61:58080/a?service=zall&project=dddssss";

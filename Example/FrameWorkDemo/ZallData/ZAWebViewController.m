@@ -53,18 +53,18 @@
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     
-//    if ([[ZallDataSDK sharedInstance] showUpWebView:webView WithRequest:navigationAction.request]) {
-//            decisionHandler(WKNavigationActionPolicyCancel);
-//        return;
-//
-//    }
-    if ([navigationAction.request.URL.absoluteString hasPrefix:@"sensorsanalytics:"]) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:navigationAction.request.URL.absoluteString?:@"" preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
-        [self presentViewController:alertController animated:YES completion:nil];
-        decisionHandler(WKNavigationActionPolicyCancel);
+    if ([[ZallDataSDK sharedInstance] showUpWebView:webView WithRequest:navigationAction.request]) {
+            decisionHandler(WKNavigationActionPolicyCancel);
         return;
+
     }
+//    if ([navigationAction.request.URL.absoluteString hasPrefix:@"sensorsanalytics:"]) {
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:navigationAction.request.URL.absoluteString?:@"" preferredStyle:UIAlertControllerStyleAlert];
+//        [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
+//        [self presentViewController:alertController animated:YES completion:nil];
+//        decisionHandler(WKNavigationActionPolicyCancel);
+//        return;
+//    }
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 

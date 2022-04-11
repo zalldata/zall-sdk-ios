@@ -483,45 +483,59 @@ NSArray<NSString *>* zaAppLoadReadConfigFromSection(const char *sectionName){
     return result;
 }
 
-+ (NSString *)idfa{
-     
-    NSString * (^blockIdfa)(void)= ^NSString *{
-        id sharedManager = za_quick_get_method(@"ASIdentifierManager", @"sharedManager");
-        NSUUID *uuid = za_quick_get_class_method(sharedManager, @"advertisingIdentifier");
-        NSString *idfa = [uuid UUIDString];
-        if (!idfa || [idfa hasPrefix:@"00000000"]) {
-            return nil;
-        }
-        return idfa;
-        
-    };
-    
-    if (@available(iOS 14, *)) {
-        /// source: https://developer.apple.com/documentation/bundleresources/information_property_list/nsusertrackingusagedescription?language=objc
-        /// Privacy - Tracking Usage Description. 为空时 (idfaAuthorization) 也不为空
-        /// 第一次安装使用有延时问题 有异步调用
-        NSString * idfaAuthorization = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSUserTrackingUsageDescription"];
-        if (idfaAuthorization) {
-            __block NSString *idfa;
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-            if (NSClassFromString(@"ATTrackingManager")) {
-                [NSClassFromString(@"ATTrackingManager") performSelector:NSSelectorFromString(@"requestTrackingAuthorizationWithCompletionHandler:") withObject:^(int state){
-                    if (state == 3) {
-                        idfa = blockIdfa();
-                    }
-                }];
-            }
-#pragma clang diagnostic pop
-            
-            return idfa;
-        }else{
-            return nil;
-        }
++ (NSString *)idfa {
+    if (![self isEnableIDFA]) {
+        return nil;
+    }
+
+    id idfaManager = [self idfaManager];
+    SEL advertisingIdentifierSelector = NSSelectorFromString(@"advertisingIdentifier");
+    if (![idfaManager respondsToSelector:advertisingIdentifierSelector]) {
+        return nil;
+    }
+
+    NSUUID *uuid = ((NSUUID * (*)(id, SEL))[idfaManager methodForSelector:advertisingIdentifierSelector])(idfaManager, advertisingIdentifierSelector);;
+    NSString *idfa = [uuid UUIDString];
+    // 在 iOS 10.0 以后，当用户开启限制广告跟踪，advertisingIdentifier 的值将是全零
+    // 00000000-0000-0000-0000-000000000000
+    if ([idfa hasPrefix:@"00000000"]) {
+        return nil;
     }
     
-    return blockIdfa();
+    return idfa;
 }
++ (id)idfaManager {
+    Class ASIdentifierManagerClass = NSClassFromString(@"ASIdentifierManager");
+    SEL sharedManagerSelector = NSSelectorFromString(@"sharedManager");
+    if (![ASIdentifierManagerClass respondsToSelector:sharedManagerSelector]) {
+        return nil;
+    }
+
+    id sharedManager = ((id (*)(id, SEL))[ASIdentifierManagerClass methodForSelector:sharedManagerSelector])(ASIdentifierManagerClass, sharedManagerSelector);
+    return sharedManager;
+}
+
++ (BOOL)isEnableIDFA {
+    if (@available(iOS 14.5, *)) {
+        Class ATTrackingManagerClass = NSClassFromString(@"ATTrackingManager");
+        SEL trackingAuthorizationStatusSelector = NSSelectorFromString(@"trackingAuthorizationStatus");
+        if (![ATTrackingManagerClass respondsToSelector:trackingAuthorizationStatusSelector]) {
+            return NO;
+        }
+        NSInteger status = ((NSInteger (*)(id, SEL))[ATTrackingManagerClass methodForSelector:trackingAuthorizationStatusSelector])(ATTrackingManagerClass, trackingAuthorizationStatusSelector);
+        return status == 3;
+    }
+
+    id idfaManager = [self idfaManager];
+    SEL isEnableIDFASelector = NSSelectorFromString(@"isAdvertisingTrackingEnabled");
+    if (![idfaManager respondsToSelector:isEnableIDFASelector]) {
+        return NO;
+    }
+
+    BOOL isEnable = ((BOOL (*)(id, SEL))[idfaManager methodForSelector:isEnableIDFASelector])(idfaManager, isEnableIDFASelector);
+    return isEnable;
+}
+
 + (NSString *)idfv{
     if (za_quick_app_extension()) {
         return nil;

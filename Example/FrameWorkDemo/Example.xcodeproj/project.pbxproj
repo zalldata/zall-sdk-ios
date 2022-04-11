@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041C91842803D33D002B2463 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041C91832803D33D002B2463 /* AppTrackingTransparency.framework */; };
+		041C9188280419A0002B2463 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041C9187280419A0002B2463 /* SystemConfiguration.framework */; };
+		041C918A28041BA9002B2463 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041C91812803D308002B2463 /* AdSupport.framework */; };
 		04301B4927A279BF009BA9AD /* ZAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04301B4827A279BF009BA9AD /* ZAWebViewController.swift */; };
 		04301B4A27A27F5E009BA9AD /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1DC228414420004061D /* test.html */; };
 		04382AAE27A15D4000A50F2D /* JSCallOC.html in Resources */ = {isa = PBXBuildFile; fileRef = CB30C1EB228414420004061D /* JSCallOC.html */; };
@@ -115,6 +118,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		041C91812803D308002B2463 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		041C91832803D33D002B2463 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		041C91852803D407002B2463 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
+		041C9187280419A0002B2463 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		04301B4827A279BF009BA9AD /* ZAWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAWebViewController.swift; sourceTree = "<group>"; };
 		04382AB027A15D7E00A50F2D /* ZARootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZARootViewController.swift; sourceTree = "<group>"; };
 		04382AB227A15DB400A50F2D /* ZAViewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAViewsViewController.swift; sourceTree = "<group>"; };
@@ -160,7 +167,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041C91842803D33D002B2463 /* AppTrackingTransparency.framework in Frameworks */,
+				041C918A28041BA9002B2463 /* AdSupport.framework in Frameworks */,
 				04BC123527B2597D00AC0997 /* ZallDataSDK.framework in Frameworks */,
+				041C9188280419A0002B2463 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +266,10 @@
 		CB30C2202284165A0004061D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				041C9187280419A0002B2463 /* SystemConfiguration.framework */,
+				041C91852803D407002B2463 /* AdServices.framework */,
+				041C91832803D33D002B2463 /* AppTrackingTransparency.framework */,
+				041C91812803D308002B2463 /* AdSupport.framework */,
 				04BC123C27B25A8D00AC0997 /* ZallDataSDK.framework */,
 				04BC123827B2598300AC0997 /* ZallDataSDKExtension.framework */,
 				04BC123427B2597D00AC0997 /* ZallDataSDK.framework */,
